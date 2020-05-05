@@ -1,0 +1,25 @@
+{
+  "km": "oui",
+  "compteur": "non",
+  "Prise en charge": "oui",
+  "Approche en forfait": "non,
+  "Approche en km": "non",
+  "Simultane": "oui",
+  "Simultane + personne": "non",
+  "Ticket": "non",
+  "ViaMichelin": "non",
+  "Distancier": "non",
+  "Depart (heure)": "oui",
+  "Arrivee (heure)": "oui",
+  "Depart (Lieu)": "oui",
+  "Arrivee (Lieu)": "oui",
+  "Peage": "non",
+  "Type (AB)": "oui",
+  "Type (CD)": "oui",
+  "Vehicule": "oui",
+  "Prise en charge (lecture seule)": "oui",
+  "Forfait": "oui",
+  "forfaits disponibles": [
+    {"nom": "Forfait 1", "description": "forfait accompagnement", "tarif": 12}
+  ] 
+}

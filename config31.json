@@ -1,0 +1,26 @@
+{
+  "km": "oui",
+  "compteur": "non",
+  "Prise en charge": "oui",
+  "Approche en forfait": "non,
+  "Approche en km": "non",
+  "Simultane": "oui",
+  "Simultane + personne": "non",
+  "Ticket": "oui",
+  "ViaMichelin": "non",
+  "Distancier": "oui",
+  "Depart (heure)": "oui",
+  "Arrivee (heure)": "oui",
+  "Depart (Lieu)": "oui",
+  "Arrivee (Lieu)": "oui",
+  "Peage": "oui",
+  "Type (AB)": "oui",
+  "Type (CD)": "oui",
+  "Vehicule": "oui",
+  "Prise en charge (lecture seule)": "oui",
+  "Forfait": "oui",
+  "forfaits disponibles": [
+    {"nom": "Forfait 1", "description": "intramuros / Toulouse, Blagnac, Colomiers, Tournefeuille, Muret", "tarif": 16},
+    {"nom": "Forfait 2", "description": "intramuros / autre commune", "tarif": 10}
+  ] 
+}
