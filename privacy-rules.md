@@ -1,3 +1,4 @@
 # Règles de confidentialité
+L’utilisation de cette application mobile suppose la collecte, d’un certain nombre d’informations personnelles concernant le Client et ses patients. Les données récoltées sont nécessaires à l’exécution des fonctionnalités proposées par cette application. Cette dernière conserve ces données à cette seule fin et s’engage à ne pas les utiliser dans un autre cadre, ni à les transmettre à des tiers, hors accord express du Client ou cas prévus par la loi.
 
-Cofidoc taxi collecte les informations relatives aux transports médicaux que vous saisissez, ceci dans le but que vous puissiez générer ultérieurement vos documents Annexe 4 requis par les organismes de santé.
+Conformément à la loi Informatique et Libertés, le Client dispose d’un droit d’opposition, d’interrogation, d’accès et de rectification des données qu’il a fournies. Pour cela, il lui suffit d’en faire la demande à groupe Cofidoc en la formulant à l’adresse électronique suivante : contact@cofidoc.fr, ou encore par courrier postal à Groupe Cofidoc – 33 rue Roquelaine - 31000 Toulouse
