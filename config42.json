@@ -1,0 +1,28 @@
+{
+  "km": "oui",
+  "compteur": "non",
+  "Prise en charge": "oui",
+  "Approche en forfait": "non",
+  "Approche en km": "non",
+  "Simultane": "oui",
+  "Simultane + personne": "non",
+  "Ticket": "non",
+  "ViaMichelin": "non",
+  "Distancier": "oui",
+  "Depart (heure)": "oui",
+  "Arrivee (heure)": "oui",
+  "Depart (Lieu)": "oui",
+  "Arrivee (Lieu)": "oui",
+  "Peage": "oui",
+  "Type (AB)": "oui",
+  "Type (CD)": "oui",
+  "Vehicule": "oui",
+  "Prise en charge (lecture seule)": "oui",
+  "Forfait": "oui",
+  "forfaits disponibles": [
+    {"nom": "Forfait 1", "description": "de 0 à 6 km", "km": 6},
+    {"nom": "Forfait 2", "description": "de 7 à 9 km", "km": 9},
+    {"nom": "Forfait 3", "description": "Saint-Étienne nord/nord ou sud/sud", "km": 9},
+    {"nom": "Forfait 4", "description": "Saint-Étienne nord/sud", "tarif": 12}
+  ] 
+}
