@@ -23,6 +23,6 @@
     {"nom": "Forfait 1", "description": "de 0 à 6 km", "km": 6},
     {"nom": "Forfait 2", "description": "de 7 à 9 km", "km": 9},
     {"nom": "Forfait 3", "description": "Saint-Étienne nord/nord ou sud/sud", "km": 9},
-    {"nom": "Forfait 4", "description": "Saint-Étienne nord/sud", "tarif": 12}
+    {"nom": "Forfait 4", "description": "Saint-Étienne nord/sud", "km": 12}
   ] 
 }
