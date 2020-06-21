@@ -22,5 +22,6 @@
   "forfaits disponibles": [
     {"nom": "Forfait 1", "description": "intramuros / Toulouse, Blagnac, Colomiers, Tournefeuille, Muret", "tarif": 16},
     {"nom": "Forfait 2", "description": "intramuros / autre commune", "tarif": 10}
-  ] 
+  ],
+  "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"]
 }
