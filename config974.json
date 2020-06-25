@@ -20,7 +20,9 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "forfait accompagnement", "tarif": 12}
+    {"nom": "Forfait accompagnant", "description": "", "tarif": 12},
+    {"nom": "Trajet court", "description": "", "tarif": 25}
   ],
-  "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"]
+  "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
+  "mapsRegionSuggestions": "re"
 }
