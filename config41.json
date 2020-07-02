@@ -1,0 +1,29 @@
+{
+  "km": "oui",
+  "compteur": "non",
+  "Prise en charge": "oui",
+  "Approche en forfait": "non",
+  "Approche en km": "non",
+  "Simultane": "oui",
+  "Simultane + personne": "non",
+  "Ticket": "non",
+  "ViaMichelin": "non",
+  "Distancier": "non",
+  "Depart (heure)": "oui",
+  "Arrivee (heure)": "oui",
+  "Depart (Lieu)": "oui",
+  "Arrivee (Lieu)": "oui",
+  "Peage": "oui",
+  "Type (AB)": "oui",
+  "Type (CD)": "oui",
+  "Vehicule": "oui",
+  "Prise en charge (lecture seule)": "oui",
+  "Forfait": "oui",
+  "forfaits disponibles": [
+    {"nom": "Blois", "description": "forfait 10 kilomètres à Blois", "km": 10},
+    {"nom": "Vendôme", "description": "forfait 5 kilomètres à Vendôme", "km": 5},
+    {"nom": "Romorantin", "description": "forfait 6 kilomètres à Romorantin", "km": 6}
+  ],
+  "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
+  "mapsRegionSuggestions": "fr"
+}
