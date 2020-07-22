@@ -1,22 +1,39 @@
-<style>
-  .journeyTable {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .journeyRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: stretch;
-    align-items: stretch;
-  }
-  .journeyCell {
-    border: 1px solid black;
-    margin: 0 2px;
-  }
-</style>
-<body>
-  <div style="padding: 10px; font-family: Arial;">
+<html>
+  <style>
+    html {
+      padding: 10px; 
+      font-family: Arial;
+      font-size: 13px;
+    }
+    body > :not(:last-child) {
+      margin-bottom: 10px;
+    }
+    table {
+      font-size: 1rem;
+    }
+    .journeyTable {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .journeyRow {
+      display: flex;
+      flex-direction: row;
+      justify-content: stretch;
+      align-items: stretch;
+    }
+    th, td {
+      border: 1px solid black;
+      margin: 0 2px;
+    }
+    .alignedTop {
+      vertical-align: top;
+    }
+    td:not(.alignedTop) {
+      text-align: center;
+    }
+  </style>
+  <body>
     <h4 style="text-align: center;">
       <span style="text-decoration: underline;"><strong
           >ANNEXE 4 - ANNEXE A LA FACTURE VALANT ATTESTATION DE SERVICE FAIT
@@ -26,49 +43,43 @@
     <p>
       Cette annexe sign&eacute;e par le patient est transmise par l'entreprise
       de taxi conventionn&eacute;e afin d'attester de la r&eacute;alit&eacute;
-      de la r&eacute;alisation du transport du patient.<br /><strong
-        >Num&eacute;ro de facture :&nbsp;
-      </strong>
+      de la r&eacute;alisation du transport du patient.<br />
+      <strong>Num&eacute;ro de facture :&nbsp;</strong>
     </p>
-    <p>&nbsp;</p>
-    <table style="border-collapse: collapse; width: 100%;" border="1">
-      <tbody>
-        <tr>
-          <td style="width: 62.5534%; border-style: solid; padding: 0px 10px;">
-            <p>
-              <strong>RENSEIGNEMENTS CONCERNANT L'ASSURE(E)</strong><br />N&deg;
-              de s&eacute;curit&eacute; sociale :
-              {{patient.socialSecurityNumber}}<br />Nom :
-              {{patient.lastname}}<br />Pr&eacute;nom : {{patient.name}}<br />Caisse&nbsp;:
-              <br />Mutuelle&nbsp;: <br />Date Naissance&nbsp;:
-              {{patient.formattedDateOfBirth}}<br /><span
-                style="font-size: 10px;"
-                >Si la personne transport&eacute;e n'est pas
-                l'assur&eacute;(e):</span
-              ><br />Nom : {{patient.insuranceHolderLastName}} {{patient.insuranceHolderFirstName}}<br />Adresse&nbsp;: {{patient.address}}
-            </p>
-            <p>&nbsp;</p>
-          </td>
-          <td
-            style="
-              width: 1.55216%;
-              border-top: medium hidden;
-              border-bottom: medium hidden;
-            "
-          >
-            &nbsp;
-          </td>
-          <td style="width: 35.8944%; padding: 0px 10px; vertical-align: top;">
-            <p><strong>IDENTIFICATION DE L'ENTREPRISE</strong></p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>Signature taxi</p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <br /><br />
+    <div style="display: flex; flex-direction: row">
+      <div style="flex: 3; border: 1px solid black; padding: 5px">
+          <strong>RENSEIGNEMENTS CONCERNANT L'ASSURE(E)</strong><br />
+          N&deg;
+          de s&eacute;curit&eacute; sociale :
+          {{patient.socialSecurityNumber}}<br />
+          Nom :
+          {{patient.lastname}}<br />
+          Pr&eacute;nom : {{patient.name}}<br />
+          Caisse&nbsp;:<br />
+          Mutuelle&nbsp;:<br />
+          Date Naissance&nbsp;: {{patient.formattedDateOfBirth}}<br />
+          <span style="font-size: .75rem">Si la personne transport&eacute;e n'est pas
+            l'assur&eacute;(e):
+          </span>
+          <br />
+          Nom : {{patient.insuranceHolderLastName}} {{patient.insuranceHolderFirstName}}<br />
+          Adresse&nbsp;: {{patient.address}}
+      </div>
+      <div style="width: 10px;"></div>
+      <div style="flex: 2; border: 1px solid black; padding: 5px">
+        <div>
+          <strong>IDENTIFICATION DE L'ENTREPRISE</strong>
+          <div style="white-space: pre;">{{enterprise.address}}</div>
+        </div>
+        <div style="margin-top: 10px">
+          Signature taxi
+          <span style="position: relative;">
+            <img src="data:image/png;base64,{{enterprise.signature}}" style="width: 100px; height: auto; position: absolute; top: -40px;"/>
+          </span>
+        </div>
+      </div>
+    </div>
+
     <table
       style="border-collapse: collapse; width: 100%; height: 18px;"
       border="1"
@@ -76,40 +87,40 @@
       <thead>
         <tr>
           <th style="width: 10%;">Date</th>
-          <th style="width: 10%;">
+          <th style="width: 20%;">
             D&eacute;part (heure et lieu)
           </th>
-          <th style="width: 10%;">
+          <th style="width: 20%;">
             Arriv&eacute;e (heure et lieu)
           </th>
-          <th style="width: 10%;">Km jour</th>
-          <th style="width: 10%;">Km nuit</th>
-          <th style="width: 10%;">Forfait</th>
-          <th style="width: 10%;">Attente</th>
-          <th style="width: 10%;">Nb patients</th>
-          <th style="width: 10%;">TPMR</th>
-          <th style="width: 10%;">P&eacute;age</th>
+          <th style="width: 8%;">Km jour</th>
+          <th style="width: 8%;">Km nuit</th>
+          <th style="width: 8%;">Attente</th>
+          <th style="width: 8%;">Forfait</th>
+          <th style="width: 8%;">Nb patients</th>
+          <th style="width: 8%;">P&eacute;age</th>
         </tr>
       </thead>
       <tbody>
+      {{#journeys}}
         <tr>
-          <td class="journeyCell">{{formattedDepartureDate}}</td>
-          <td class="journeyCell">
-            <p>{{formattedDepartureTime}}</p>
-            <p>{{formattedDepartureLocation}}</p>
+          <td>{{formattedDepartureDate}}</td>
+          <td class="alignedTop">
+            <div>{{formattedDepartureTime}}</div>
+            <div>{{formattedDepartureLocation}}</div>
           </td>
-          <td class="journeyCell">
-            <p>{{formattedArrivalTime}}</p>
-            <p>{{formattedArrivalLocation}}</p>
+          <td class="alignedTop">
+            <div>{{formattedArrivalTime}}</div>
+            <div>{{formattedArrivalLocation}}</div>
           </td>
-          <td class="journeyCell">&nbsp;</td>
-          <td class="journeyCell">&nbsp;</td>
-          <td class="journeyCell">{{journeyType}}</td>
-          <td class="journeyCell">&nbsp;</td>
-          <td class="journeyCell">{{concurrentJourneys}}</td>
-          <td class="journeyCell">&nbsp;</td>
-          <td class="journeyCell">{{toll}}</td>
-        </tr>
+          <td>{{dayTimeKm}}</td>
+          <td>{{nightTimeKm}}</td>
+          <td>{{waitingTime}}</td>
+          <td>{{journeyType}}</td>
+          <td>{{concurrentJourneys}}</td>
+          <td>{{toll}}</td>
+        </tr> 
+      {{/journeys}}
       </tbody>
     </table>
     <p>
@@ -127,9 +138,11 @@
     </p>
     <div style="display: flex; flex-direction: row; justify-content: space-between;">
       <span>Fait &agrave; {{doneIn}} Le {{now}}</span>
-      <span style="position: relative;">
+      <span>
         Signature Patient
-        <img src="data:image/png;base64,{{signaturePatient}}" style="width: 100px; height: auto; position: absolute; top: -50px;"/>
+      </span>
+      <span style="position: relative;">
+        <img src="data:image/png;base64,{{signaturePatient}}" style="width: 100px; height: auto; position: absolute; top: -40px; left: -100px"/>
       </span>
     </div>
     <p>
@@ -139,5 +152,5 @@
         (art. L377-1 du code de la S&eacute;curit&eacute; sociale, 1047 du Code
         Rural, 441.1 du Code P&eacute;nal)</em>
     </p>
-  </div>
-</body>
+  </body>
+</html>
