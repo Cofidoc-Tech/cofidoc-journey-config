@@ -57,7 +57,7 @@
           Pr&eacute;nom : {{patient.name}}<br />
           Caisse&nbsp;:<br />
           Mutuelle&nbsp;:<br />
-          Date Naissance&nbsp;: {{patient.formattedDateOfBirth}}<br />
+          Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}<br />
           <span style="font-size: .75rem">Si la personne transport&eacute;e n'est pas
             l'assur&eacute;(e):
           </span>
@@ -104,7 +104,7 @@
       <tbody>
       {{#journeys}}
         <tr>
-          <td>{{formattedDepartureDate}}</td>
+          <td>{{{formattedDepartureDate}}}</td>
           <td class="alignedTop">
             <div>{{formattedDepartureTime}}</div>
             <div>{{formattedDepartureLocation}}</div>
@@ -137,7 +137,7 @@
       d&eacute;taill&eacute;(s) ci-dessus.
     </p>
     <div style="display: flex; flex-direction: row; justify-content: space-between;">
-      <span>Fait &agrave; {{doneIn}} Le {{now}}</span>
+      <span>Fait &agrave; {{doneIn}} Le {{{now}}}</span>
       <span>
         Signature Patient
       </span>
