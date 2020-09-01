@@ -1,7 +1,7 @@
 <html>
   <style>
     html {
-      padding: 10px; 
+      padding: 10px;
       font-family: Arial;
       font-size: 13px;
     }
@@ -51,10 +51,9 @@
           <strong>RENSEIGNEMENTS CONCERNANT L'ASSURE(E)</strong><br />
           N&deg;
           de s&eacute;curit&eacute; sociale :
-          {{patient.socialSecurityNumber}}<br />
-          Nom :
-          {{patient.lastname}}<br />
-          Pr&eacute;nom : {{patient.name}}<br />
+          {{{patient.socialSecurityNumber}}}<br />
+          Nom&nbsp;: {{{patient.lastname}}}<br />
+          Pr&eacute;nom : {{{patient.name}}}<br />
           Caisse&nbsp;:<br />
           Mutuelle&nbsp;:<br />
           Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}<br />
@@ -62,8 +61,8 @@
             l'assur&eacute;(e):
           </span>
           <br />
-          Nom : {{patient.insuranceHolderLastName}} {{patient.insuranceHolderFirstName}}<br />
-          Adresse&nbsp;: {{patient.address}}
+          Nom : {{{patient.insuranceHolderLastName}}} {{{patient.insuranceHolderFirstName}}}<br />
+          Adresse&nbsp;: {{{patient.address}}}
       </div>
       <div style="width: 10px;"></div>
       <div style="flex: 2; border: 1px solid black; padding: 5px">
@@ -107,19 +106,19 @@
           <td>{{{formattedDepartureDate}}}</td>
           <td class="alignedTop">
             <div>{{formattedDepartureTime}}</div>
-            <div>{{formattedDepartureLocation}}</div>
+            <div>{{{formattedDepartureLocation}}}</div>
           </td>
           <td class="alignedTop">
             <div>{{formattedArrivalTime}}</div>
-            <div>{{formattedArrivalLocation}}</div>
+            <div>{{{formattedArrivalLocation}}}</div>
           </td>
           <td>{{dayTimeKm}}</td>
           <td>{{nightTimeKm}}</td>
           <td>{{waitingTime}}</td>
-          <td>{{{forfaitTarif}}}</td>
+          <td>{{forfaitTarif}}</td>
           <td>{{concurrentJourneys}}</td>
-          <td>{{{toll}}}</td>
-        </tr> 
+          <td>{{toll}}</td>
+        </tr>
       {{/journeys}}
       </tbody>
     </table>
@@ -142,7 +141,7 @@
         Signature Patient
       </span>
       <span style="position: relative;">
-        <img src="data:image/png;base64,{{signaturePatient}}" style="width: 80px; height: auto; position: absolute; top: -20px; left: -100px"/>
+
       </span>
     </div>
     <div style="margin-top: 60px">
