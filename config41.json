@@ -25,5 +25,6 @@
     {"nom": "Romorantin", "description": "forfait 6 kilomètres à Romorantin", "km": 6}
   ],
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
-  "mapsRegionSuggestions": "fr"
+  "mapsRegionSuggestions": "fr",
+  "templateUrl": "https://raw.githubusercontent.com/euZebe/cofidoc-journey-config/20200920/templates/template-31.html"
 }

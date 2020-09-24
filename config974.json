@@ -24,5 +24,6 @@
     {"nom": "Trajet court", "description": "", "tarif": 25}
   ],
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
-  "mapsRegionSuggestions": "re"
+  "mapsRegionSuggestions": "re",
+  "templateUrl": "https://raw.githubusercontent.com/euZebe/cofidoc-journey-config/20200920/templates/template-31.html"
 }
