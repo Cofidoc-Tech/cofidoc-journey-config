@@ -24,7 +24,10 @@
     {"nom": "Vendôme", "description": "forfait 5 kilomètres à Vendôme", "km": 5},
     {"nom": "Romorantin", "description": "forfait 6 kilomètres à Romorantin", "km": 6}
   ],
+  "debutNuit": 19,
+  "finNuit": 7,
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
+  "tpmr": "oui",
   "mapsRegionSuggestions": "fr",
   "templateUrl": "https://raw.githubusercontent.com/euZebe/cofidoc-journey-config/20200920/templates/template-31.html"
 }
