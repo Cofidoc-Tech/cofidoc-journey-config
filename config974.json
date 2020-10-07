@@ -27,5 +27,5 @@
   "finNuit": 6,
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
   "mapsRegionSuggestions": "re",
-  "templateUrl": "https://raw.githubusercontent.com/euZebe/cofidoc-journey-config/20201007/templates/template-974.html"
+  "templateUrl": "https://raw.githubusercontent.com/euZebe/cofidoc-journey-config/20201007-1/templates/template-974.html"
 }
