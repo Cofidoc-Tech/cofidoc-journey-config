@@ -5,8 +5,8 @@
     <style>
       html {
         font-family: Arial;
-        --font-size: 8px;
-        font-size: var(--font-size);
+        --table-font-size: 9px;
+        font-size: 11px;
       }
       .flex {
         display: flex;
@@ -33,7 +33,7 @@
         border-collapse: collapse;
         width: 100%;
         height: 18px;
-        font-size: var(--font-size);
+        font-size: var(--table-font-size);
       }
       th,
       td {
@@ -98,7 +98,7 @@
     </p>
     <p>Num&eacute;ro de facture: {{{}}}</p>
 
-    <table>
+    <table style="font-size: 1rem">
       <thead>
         <tr>
           <th class="cellHeader">RENSEIGNEMENTS CONCERNANT L'ASSURE(E)</th>

@@ -1,184 +1,186 @@
 <html>
-<style>
-  html {
-    padding: 10px;
-    font-family: Arial;
-    --titleColor: rgb(65, 120, 176);
-    --font-size: 8px;
-    font-size: var(--font-size);
-  }
-  body > :not(:last-child) {
-    margin-bottom: 10px;
-  }
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    height: 18px;
-    font-size: var(--font-size);
-  }
-  th,
-  td {
-    border: 1px solid black;
-    padding-left: 5px;
-    font-weight: normal;
-  }
-  .alignedTop {
-    vertical-align: top;
-  }
-  td:not(.alignedTop) {
-    text-align: center;
-  }
+  <style>
+    html {
+      padding: 10px;
+      font-family: Arial;
+      --titleColor: rgb(65, 120, 176);
+      --table-font-size: 8px;
+      font-size: 11px;
+    }
+    body > :not(:last-child) {
+      margin-bottom: 10px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      height: 18px;
+      font-size: var(--table-font-size);
+    }
+    th,
+    td {
+      border: 1px solid black;
+      padding-left: 5px;
+      font-weight: normal;
+    }
+    .alignedTop {
+      vertical-align: top;
+    }
+    td:not(.alignedTop) {
+      text-align: center;
+    }
 
-  .patientAndTaxiInfo {
-    display: flex;
-    flex-direction: row;
-  }
-  .header {
-    color: var(--titleColor);
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  .title {
-    color: white;
-    display: flex;
-    justify-content: center;
-  }
-  .title > :only-child {
-    background-color: var(--titleColor);
-  }
+    .patientAndTaxiInfo {
+      display: flex;
+      flex-direction: row;
+    }
+    .header {
+      color: var(--titleColor);
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    .title {
+      color: white;
+      display: flex;
+      justify-content: center;
+    }
+    .title > :only-child {
+      background-color: var(--titleColor);
+    }
 
-  .footer > * {
-    border: 1px solid black;
-    border-bottom: none;
-  }
-  .footer > :last-child {
-    border: 1px solid black;
-    min-height: 100px;
-  }
-</style>
-<body>
-<div class="header">ANNEXE 4</div>
-<div class="title">
-  <span> ANNEXE A LA FACTURE VALANT ATTESTATION DE SERVICE FAIT </span>
-</div>
-
-<p>
-  En application de l'article 7.2, cette annexe sign&eacute;e par le patient
-  est transmise par l'entreprise de taxi conventionn&eacute;e afin
-  d'attester de la r&eacute;alit&eacute; de la r&eacute;alisation du
-  transport du patient.
-</p>
-<div class="patientAndTaxiInfo">
-  <div style="flex: 2; border: 1px solid black; padding: 5px">
-    <div><strong>RENSEIGNEMENTS CONCERNANT L'ASSURE(E)</strong></div>
-    <div>
-      N&deg; de s&eacute;curit&eacute; sociale :
-      {{{patient.socialSecurityNumber}}}
+    .footer > * {
+      border: 1px solid black;
+      border-bottom: none;
+    }
+    .footer > :last-child {
+      border: 1px solid black;
+      min-height: 100px;
+    }
+  </style>
+  <body>
+    <div class="header">ANNEXE 4</div>
+    <div class="title">
+      <span> ANNEXE A LA FACTURE VALANT ATTESTATION DE SERVICE FAIT </span>
     </div>
-    <div>Nom patronymique&nbsp;: {{{patient.lastname}}}</div>
-    <div>Nom d'usage (facultatif)&nbsp;: {{{patient.lastname}}}</div>
-    <div>Pr&eacute;noms : {{{patient.name}}}</div>
 
-    <div>Date de naissance : {{{patient.formattedDateOfBirth}}}</div>
-    <span style="font-weight: bold"
-    >Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):
+    <p>
+      En application de l'article 7.2, cette annexe sign&eacute;e par le patient
+      est transmise par l'entreprise de taxi conventionn&eacute;e afin
+      d'attester de la r&eacute;alit&eacute; de la r&eacute;alisation du
+      transport du patient.
+    </p>
+    <div class="patientAndTaxiInfo">
+      <div style="flex: 2; border: 1px solid black; padding: 5px">
+        <div><strong>RENSEIGNEMENTS CONCERNANT L'ASSURE(E)</strong></div>
+        <div>
+          N&deg; de s&eacute;curit&eacute; sociale :
+          {{{patient.socialSecurityNumber}}}
+        </div>
+        <div>Nom patronymique&nbsp;: {{{patient.lastname}}}</div>
+        <div>Nom d'usage (facultatif)&nbsp;: {{{patient.lastname}}}</div>
+        <div>Pr&eacute;noms : {{{patient.name}}}</div>
+
+        <div>Date de naissance : {{{patient.formattedDateOfBirth}}}</div>
+        <span style="font-weight: bold"
+          >Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):
         </span>
 
-    <div>Nom patronymique: {{{patient.insuranceHolderLastName}}}</div>
-    <div>Nom d'usage:</div>
-    <div>Pr&eacute;noms : {{{patient.insuranceHolderFirstName}}}</div>
-  </div>
-  <div style="width: 10px"></div>
-  <div style="flex: 2; border: 1px solid black; padding: 5px">
-    <div>IDENTIFICATION DE L'ENTREPRISE (cachet)</div>
-    <div>Num&eacute;ro d'identification</div>
-    <div style="white-space: pre">{{{enterprise.nameAndAddress}}}</div>
-    <div>Chauffeur (nom/pr&eacute;nom) :</div>
-    <div>{{{user.lastName}}} {{{user.firstName}}}</div>
-    <div>V&eacute;hicule (n&deg; min&eacute;ralogique) : {{{car}}}</div>
-  </div>
-</div>
-
-<table>
-  <thead>
-  <tr>
-    <th style="width: 25%">
-      <div class="cellHeader">DEPART</div>
-      <div>Date</div>
-      <div>Heure</div>
-      <div>Lieu de prise en charge</div>
-    </th>
-    <th style="width: 25%">
-      <div class="cellHeader">ARRIVEE</div>
-      <div>Date</div>
-      <div>Heure</div>
-      <div>Lieu de prise en charge</div>
-    </th>
-    <th style="width: 8%" class="cellHeader">Distance km</th>
-    <th style="width: 10%" class="cellHeader">
-      Nombre de patients transport&eacute;s
-    </th>
-    <th>Code(s) tarif</th>
-    <th style="width: 12%" class="cellHeader">
-      A cocher si transport TPMR
-    </th>
-    <th style="width: 12%" class="cellHeader">Forfait d'attente ou Marche lente</th>
-    <th style="width: 8%" class="cellHeader">
-      <div>P&eacute;age</div>
-    </th>
-    <th>Base de remboursement</th>
-  </tr>
-  </thead>
-  <tbody>
-  {{#journeys}}
-  <tr>
-    <td class="alignedTop">
-      <div>{{{formattedDepartureDate}}}</div>
-      <div>{{formattedDepartureTime}}</div>
-      <div>{{{formattedDepartureLocation}}}</div>
-    </td>
-    <td class="alignedTop">
-      <div>{{{formattedArrivalDate}}}</div>
-      <div>{{formattedArrivalTime}}</div>
-      <div>{{{formattedArrivalLocation}}}</div>
-    </td>
-    <td>{{dayTimeKm}}</td>
-    <td>{{concurrentJourneys}}</td>
-    <td>{{{journeyType}}}</td>
-    <td>{{{tpmr}}}</td>
-    <td></td>
-    <td>{{toll}}</td>
-    <td></td>
-  </tr>
-  {{/journeys}}
-  </tbody>
-</table>
-
-<div class="footer">
-  <div>ATTESTATION DE L'ASSURE(E)</div>
-  <div>
-    <div>
-      L'assur&eacute;(e), ou la personne transport&eacute;e, ou son
-      repr&eacute;sentant l&eacute;gal, atteste de la r&eacute;alit&eacute;
-      et des conditions du (des) transports d&eacute;taill&eacute;(s)
-      ci-dessus.
+        <div>Nom patronymique: {{{patient.insuranceHolderLastName}}}</div>
+        <div>Nom d'usage:</div>
+        <div>Pr&eacute;noms : {{{patient.insuranceHolderFirstName}}}</div>
+      </div>
+      <div style="width: 10px"></div>
+      <div style="flex: 2; border: 1px solid black; padding: 5px">
+        <div>IDENTIFICATION DE L'ENTREPRISE (cachet)</div>
+        <div>Num&eacute;ro d'identification</div>
+        <div style="white-space: pre">{{{enterprise.nameAndAddress}}}</div>
+        <div>Chauffeur (nom/pr&eacute;nom) :</div>
+        <div>{{{user.lastName}}} {{{user.firstName}}}</div>
+        <div>V&eacute;hicule (n&deg; min&eacute;ralogique) : {{{car}}}</div>
+      </div>
     </div>
-    <div
-            style="
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 25%">
+            <div class="cellHeader">DEPART</div>
+            <div>Date</div>
+            <div>Heure</div>
+            <div>Lieu de prise en charge</div>
+          </th>
+          <th style="width: 25%">
+            <div class="cellHeader">ARRIVEE</div>
+            <div>Date</div>
+            <div>Heure</div>
+            <div>Lieu de prise en charge</div>
+          </th>
+          <th style="width: 8%" class="cellHeader">Distance km</th>
+          <th style="width: 10%" class="cellHeader">
+            Nombre de patients transport&eacute;s
+          </th>
+          <th>Code(s) tarif</th>
+          <th style="width: 12%" class="cellHeader">
+            A cocher si transport TPMR
+          </th>
+          <th style="width: 12%" class="cellHeader">
+            Forfait d'attente ou Marche lente
+          </th>
+          <th style="width: 8%" class="cellHeader">
+            <div>P&eacute;age</div>
+          </th>
+          <th>Base de remboursement</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#journeys}}
+        <tr>
+          <td class="alignedTop">
+            <div>{{{formattedDepartureDate}}}</div>
+            <div>{{formattedDepartureTime}}</div>
+            <div>{{{formattedDepartureLocation}}}</div>
+          </td>
+          <td class="alignedTop">
+            <div>{{{formattedArrivalDate}}}</div>
+            <div>{{formattedArrivalTime}}</div>
+            <div>{{{formattedArrivalLocation}}}</div>
+          </td>
+          <td>{{dayTimeKm}}</td>
+          <td>{{concurrentJourneys}}</td>
+          <td>{{{journeyType}}}</td>
+          <td>{{{tpmr}}}</td>
+          <td></td>
+          <td>{{toll}}</td>
+          <td></td>
+        </tr>
+        {{/journeys}}
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <div>ATTESTATION DE L'ASSURE(E)</div>
+      <div>
+        <div>
+          L'assur&eacute;(e), ou la personne transport&eacute;e, ou son
+          repr&eacute;sentant l&eacute;gal, atteste de la r&eacute;alit&eacute;
+          et des conditions du (des) transports d&eacute;taill&eacute;(s)
+          ci-dessus.
+        </div>
+        <div
+          style="
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             padding-top: 1rem;
           "
-    >
-      <span>Fait &agrave; {{doneIn}} Le {{{now}}}</span>
-      <span> Signature Patient </span>
-      <span style="position: relative">
+        >
+          <span>Fait &agrave; {{doneIn}} Le {{{now}}}</span>
+          <span> Signature Patient </span>
+          <span style="position: relative">
             <img
-                    src="data:image/png;base64,{{{signaturePatient}}}"
-                    style="
+              src="data:image/png;base64,{{{signaturePatient}}}"
+              style="
                 width: 80px;
                 height: auto;
                 position: absolute;
@@ -187,17 +189,17 @@
               "
             />
           </span>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div>
-  <em style="font-size: 0.75rem">
-    La loi rend passible d&rsquo;amende et/ou d&rsquo;emprisonnement
-    quiconque se rend coupable de fraudes ou de fausses d&eacute;clarations
-    (art. L377-1 du code de la S&eacute;curit&eacute; sociale, 1047 du Code
-    Rural, 441.1 du Code P&eacute;nal)
-  </em>
-</div>
-</body>
+    <div>
+      <em style="font-size: 0.75rem">
+        La loi rend passible d&rsquo;amende et/ou d&rsquo;emprisonnement
+        quiconque se rend coupable de fraudes ou de fausses d&eacute;clarations
+        (art. L377-1 du code de la S&eacute;curit&eacute; sociale, 1047 du Code
+        Rural, 441.1 du Code P&eacute;nal)
+      </em>
+    </div>
+  </body>
 </html>
