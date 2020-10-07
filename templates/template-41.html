@@ -3,13 +3,14 @@
     html {
       padding: 10px;
       font-family: Arial;
-      font-size: 8px;
+      --font-size: 8px;
+      font-size: var(--font-size);
     }
     body > :not(:last-child) {
       margin-bottom: 10px;
     }
     table {
-      font-size: 1rem;
+      font-size: var(--font-size);
     }
     th,
     td {
