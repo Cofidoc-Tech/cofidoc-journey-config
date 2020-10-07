@@ -1,144 +1,163 @@
 <html>
-<style>
-  html {
-    padding: 10px;
-    font-family: Arial;
-    font-size: 8px;
-  }
-  body > :not(:last-child) {
-    margin-bottom: 10px;
-  }
-  th, td {
-    border: 1px solid black;
-    margin: 0 2px;
-  }
-  .alignedTop {
-    vertical-align: top;
-  }
-  td:not(.alignedTop) {
-    text-align: center;
-  }
-</style>
-<body>
-<h4 style="text-align: center;">
-      <span style="text-decoration: underline;"><strong
-      >ANNEXE 4 - ANNEXE A LA FACTURE VALANT ATTESTATION DE SERVICE FAIT
+  <style>
+    html {
+      padding: 10px;
+      font-family: Arial;
+      font-size: 8px;
+    }
+    body > :not(:last-child) {
+      margin-bottom: 10px;
+    }
+    table {
+      font-size: 1rem;
+    }
+    th,
+    td {
+      border: 1px solid black;
+      margin: 0 2px;
+    }
+    .alignedTop {
+      vertical-align: top;
+    }
+    td:not(.alignedTop) {
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h4 style="text-align: center">
+      <span style="text-decoration: underline"
+        ><strong
+          >ANNEXE 4 - ANNEXE A LA FACTURE VALANT ATTESTATION DE SERVICE FAIT
         </strong>
       </span>
-</h4>
-<p>
-  Cette annexe sign&eacute;e par le patient est transmise par l'entreprise
-  de taxi conventionn&eacute;e afin d'attester de la r&eacute;alit&eacute;
-  de la r&eacute;alisation du transport du patient.<br />
-  <strong>Num&eacute;ro de facture :&nbsp;</strong>
-</p>
-<div style="display: flex; flex-direction: row">
-  <div style="flex: 3; border: 1px solid black; padding: 5px">
-    <strong>RENSEIGNEMENTS CONCERNANT L'ASSURE(E)</strong><br />
-    N&deg;
-    de s&eacute;curit&eacute; sociale :
-    {{{patient.socialSecurityNumber}}}<br />
-    Nom&nbsp;: {{{patient.lastname}}}<br />
-    Pr&eacute;nom : {{{patient.name}}}<br />
-    Caisse&nbsp;:<br />
-    Mutuelle&nbsp;:<br />
-    Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}<br />
-    <span style="font-size: 0.75rem">Si la personne transport&eacute;e n'est pas
-            l'assur&eacute;(e):
+    </h4>
+    <p>
+      Cette annexe sign&eacute;e par le patient est transmise par l'entreprise
+      de taxi conventionn&eacute;e afin d'attester de la r&eacute;alit&eacute;
+      de la r&eacute;alisation du transport du patient.<br />
+      <strong>Num&eacute;ro de facture :&nbsp;</strong>
+    </p>
+    <div style="display: flex; flex-direction: row">
+      <div style="flex: 3; border: 1px solid black; padding: 5px">
+        <strong>RENSEIGNEMENTS CONCERNANT L'ASSURE(E)</strong><br />
+        N&deg; de s&eacute;curit&eacute; sociale :
+        {{{patient.socialSecurityNumber}}}<br />
+        Nom&nbsp;: {{{patient.lastname}}}<br />
+        Pr&eacute;nom : {{{patient.name}}}<br />
+        Caisse&nbsp;:<br />
+        Mutuelle&nbsp;:<br />
+        Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}<br />
+        <span style="font-size: 0.75rem"
+          >Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):
+        </span>
+        <br />
+        Nom : {{{patient.insuranceHolderLastName}}}
+        {{{patient.insuranceHolderFirstName}}}<br />
+        Adresse&nbsp;: {{{patient.address}}}
+      </div>
+      <div style="width: 10px"></div>
+      <div style="flex: 2; border: 1px solid black; padding: 5px">
+        <div>
+          <strong>IDENTIFICATION DE L'ENTREPRISE</strong>
+          <div style="white-space: pre">{{{enterprise.nameAndAddress}}}</div>
+        </div>
+        <div style="margin-top: 10px">
+          Signature taxi
+          <span style="position: relative">
+            <img
+              src="data:image/png;base64,{{{enterprise.signature}}}"
+              style="
+                width: 100px;
+                height: auto;
+                position: absolute;
+                top: -20px;
+                left: 60px;
+              "
+            />
           </span>
-    <br />
-    Nom : {{{patient.insuranceHolderLastName}}} {{{patient.insuranceHolderFirstName}}}<br />
-    Adresse&nbsp;: {{{patient.address}}}
-  </div>
-  <div style="width: 10px;"></div>
-  <div style="flex: 2; border: 1px solid black; padding: 5px">
-    <div>
-      <strong>IDENTIFICATION DE L'ENTREPRISE</strong>
-      <div style="white-space: pre;">{{{enterprise.nameAndAddress}}}</div>
+        </div>
+      </div>
     </div>
-    <div style="margin-top: 10px">
-      Signature taxi
-      <span style="position: relative;">
-            <img src="data:image/png;base64,{{{enterprise.signature}}}" style="width: 100px; height: auto; position: absolute; top: -20px; left: 60px"/>
-          </span>
-    </div>
-  </div>
-</div>
 
-<table
-        style="border-collapse: collapse; width: 100%; height: 18px;"
-        border="1"
->
-  <thead>
-  <tr>
-    <th style="width: 10%;">Date</th>
-    <th style="width: 20%;">
-      D&eacute;part (heure et lieu)
-    </th>
-    <th style="width: 20%;">
-      Arriv&eacute;e (heure et lieu)
-    </th>
-    <th style="width: 8%;">Km jour</th>
-    <th style="width: 8%;">Km nuit</th>
-    <th style="width: 8%;">Attente</th>
-    <th style="width: 8%;">Forfait / Tarif</th>
-    <th style="width: 6%;">TPMR</th>
-    <th style="width: 8%;">Nb patients</th>
-    <th style="width: 8%;">P&eacute;age</th>
-  </tr>
-  </thead>
-  <tbody>
-  {{#journeys}}
-  <tr>
-    <td>{{{formattedDepartureDate}}}</td>
-    <td class="alignedTop">
-      <div>{{formattedDepartureTime}}</div>
-      <div>{{{formattedDepartureLocation}}}</div>
-    </td>
-    <td class="alignedTop">
-      <div>{{formattedArrivalTime}}</div>
-      <div>{{{formattedArrivalLocation}}}</div>
-    </td>
-    <td>{{dayTimeKm}}</td>
-    <td>{{nightTimeKm}}</td>
-    <td>{{waitingTime}}</td>
-    <td>{{forfaitTarif}}</td>
-    <td>{{{tpmr}}}</td>
-    <td>{{concurrentJourneys}}</td>
-    <td>{{toll}}</td>
-  </tr>
-  {{/journeys}}
-  </tbody>
-</table>
-<p>
-  <strong>SUBROGATION</strong> : L'assur&eacute;(e) autorise le versement
-  direct au transporteur du montant remboursable du(des) transport(s)
-  ci-dessus. Il s&rsquo;engage, s&rsquo;il y a lieu, &agrave; payer au
-  transporteur tout ou partie de la facture en cas de refus total ou partiel
-  de prise en charge par l&rsquo;organisme d&rsquo;assurance maladie.
-</p>
-<p>
-  <br /><strong>ATTESTATION</strong> : L'assur&eacute;(e), ou la personne
-  transport&eacute;e, ou son repr&eacute;sentant l&eacute;gal, atteste de la
-  r&eacute;alit&eacute; et des conditions du (des) transports
-  d&eacute;taill&eacute;(s) ci-dessus.
-</p>
-<div style="display: flex; flex-direction: row; justify-content: space-between;">
-  <span>Fait &agrave; {{doneIn}} Le {{{now}}}</span>
-  <span>
-        Signature Patient
+    <table
+      style="border-collapse: collapse; width: 100%; height: 18px"
+      border="1"
+    >
+      <thead>
+        <tr>
+          <th style="width: 10%">Date</th>
+          <th style="width: 20%">D&eacute;part (heure et lieu)</th>
+          <th style="width: 20%">Arriv&eacute;e (heure et lieu)</th>
+          <th style="width: 8%">Km jour</th>
+          <th style="width: 8%">Km nuit</th>
+          <th style="width: 8%">Attente</th>
+          <th style="width: 8%">Forfait / Tarif</th>
+          <th style="width: 6%">TPMR</th>
+          <th style="width: 8%">Nb patients</th>
+          <th style="width: 8%">P&eacute;age</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#journeys}}
+        <tr>
+          <td>{{{formattedDepartureDate}}}</td>
+          <td class="alignedTop">
+            <div>{{formattedDepartureTime}}</div>
+            <div>{{{formattedDepartureLocation}}}</div>
+          </td>
+          <td class="alignedTop">
+            <div>{{formattedArrivalTime}}</div>
+            <div>{{{formattedArrivalLocation}}}</div>
+          </td>
+          <td>{{dayTimeKm}}</td>
+          <td>{{nightTimeKm}}</td>
+          <td>{{waitingTime}}</td>
+          <td>{{forfaitTarif}}</td>
+          <td>{{{tpmr}}}</td>
+          <td>{{concurrentJourneys}}</td>
+          <td>{{toll}}</td>
+        </tr>
+        {{/journeys}}
+      </tbody>
+    </table>
+    <p>
+      <strong>SUBROGATION</strong> : L'assur&eacute;(e) autorise le versement
+      direct au transporteur du montant remboursable du(des) transport(s)
+      ci-dessus. Il s&rsquo;engage, s&rsquo;il y a lieu, &agrave; payer au
+      transporteur tout ou partie de la facture en cas de refus total ou partiel
+      de prise en charge par l&rsquo;organisme d&rsquo;assurance maladie.
+    </p>
+    <p>
+      <br /><strong>ATTESTATION</strong> : L'assur&eacute;(e), ou la personne
+      transport&eacute;e, ou son repr&eacute;sentant l&eacute;gal, atteste de la
+      r&eacute;alit&eacute; et des conditions du (des) transports
+      d&eacute;taill&eacute;(s) ci-dessus.
+    </p>
+    <div
+      style="display: flex; flex-direction: row; justify-content: space-between"
+    >
+      <span>Fait &agrave; {{doneIn}} Le {{{now}}}</span>
+      <span> Signature Patient </span>
+      <span style="position: relative">
+        <img
+          src="data:image/png;base64,{{{signaturePatient}}}"
+          style="
+            width: 80px;
+            height: auto;
+            position: absolute;
+            top: -20px;
+            left: -100px;
+          "
+        />
       </span>
-  <span style="position: relative;">
-        <img src="data:image/png;base64,{{{signaturePatient}}}" style="width: 80px; height: auto; position: absolute; top: -20px; left: -100px"/>
-      </span>
-</div>
-<div style="margin-top: 60px">
-  <em style="font-size: 0.75rem;">
-    La loi rend passible d&rsquo;amende et/ou d&rsquo;emprisonnement
-    quiconque se rend coupable de fraudes ou de fausses d&eacute;clarations
-    (art. L377-1 du code de la S&eacute;curit&eacute; sociale, 1047 du Code
-    Rural, 441.1 du Code P&eacute;nal)
-  </em>
-</div>
-</body>
+    </div>
+    <div style="margin-top: 60px">
+      <em style="font-size: 0.75rem">
+        La loi rend passible d&rsquo;amende et/ou d&rsquo;emprisonnement
+        quiconque se rend coupable de fraudes ou de fausses d&eacute;clarations
+        (art. L377-1 du code de la S&eacute;curit&eacute; sociale, 1047 du Code
+        Rural, 441.1 du Code P&eacute;nal)
+      </em>
+    </div>
+  </body>
 </html>
