@@ -215,10 +215,12 @@
           <span>Fait &agrave; {{doneIn}}</span><span>Le {{{now}}}</span
           ><span>Signature </span>
           <span style="position: relative">
+            {{#signaturePatient}}
             <img
               src="data:image/png;base64,{{{signaturePatient}}}"
               style="width: 80px; height: auto; position: absolute; top: -20px"
             />
+            {{/signaturePatient}}
           </span>
         </div>
       </div>
