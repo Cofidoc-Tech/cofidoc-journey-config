@@ -130,7 +130,7 @@
         <tr>
           <td>
             Nom patronymique (nom de naissance) :
-            <div>{{{patient.lastname}}}</div>
+            <div>{{{patient.computedInsuranceHolderLastName}}}</div>
           </td>
         </tr>
         <tr>
@@ -139,7 +139,7 @@
         <tr>
           <td>
             Pr&eacute;noms :
-            <div>{{{patient.name}}}</div>
+            <div>{{{patient.computedInsuranceHolderFirstName}}}</div>
           </td>
         </tr>
       </tbody>
@@ -147,9 +147,9 @@
 
     <div class="notTheInsuredPerson">
       <div>Si la personne transport&eacute;e n'est pas l'assur&eacute;(e)</div>
-      <div>Nom patronymique : {{{patient.insuranceHolderLastName}}}</div>
+      <div>Nom patronymique : {{{patient.computedNonInsuranceHolderLastName}}}</div>
       <div>Nom d'usage (facultatif) :</div>
-      <div>Pr&eacute;noms : {{{patient.insuranceHolderFirstName}}}</div>
+      <div>Pr&eacute;noms : {{{patient.computedNonInsuranceHolderFirstName}}}</div>
     </div>
 
     <table>

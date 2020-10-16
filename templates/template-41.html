@@ -43,8 +43,8 @@
         <strong>RENSEIGNEMENTS CONCERNANT L'ASSURE(E)</strong><br />
         N&deg; de s&eacute;curit&eacute; sociale :
         {{{patient.socialSecurityNumber}}}<br />
-        Nom&nbsp;: {{{patient.lastname}}}<br />
-        Pr&eacute;nom : {{{patient.name}}}<br />
+        Nom&nbsp;: {{{patient.computedInsuranceHolderLastName}}}<br />
+        Pr&eacute;nom : {{{patient.computedInsuranceHolderFirstName}}}<br />
         Caisse&nbsp;: {{{patient.socialSecurityName}}}<br />
         Mutuelle&nbsp;: {{{patient.healthInsuranceName}}}<br />
         Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}<br />
@@ -52,8 +52,8 @@
           >Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):
         </span>
         <br />
-        Nom : {{{patient.insuranceHolderLastName}}}
-        {{{patient.insuranceHolderFirstName}}}<br />
+        Nom : {{{patient.computedNonInsuranceHolderLastName}}}
+        {{{patient.computedNonInsuranceHolderFirstName}}}<br />
         Adresse&nbsp;: {{{patient.address}}}
       </div>
       <div style="width: 10px"></div>
