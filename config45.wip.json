@@ -6,7 +6,7 @@
   "Approche en km": "non",
   "Simultane": "oui",
   "Simultane + personne": "non",
-  "Ticket": "non",
+  "Ticket": "oui",
   "ViaMichelin": "non",
   "Distancier": "oui",
   "Depart (heure)": "oui",
@@ -20,11 +20,11 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "intramuros / Toulouse, Blagnac, Colomiers, Tournefeuille, Muret", "tarif": 16},
-    {"nom": "Forfait 2", "description": "intramuros / autre commune", "tarif": 10}
+    {"nom": "Forfait 1", "description": "intramuros", "tarif": 11},
+    {"nom": "Forfait 2", "description": "Orléans / La Source", "tarif": 13}
   ],
   "debutNuit": 19,
-  "finNuit": 8,
+  "finNuit": 7,
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
   "tpmr": "oui",
   "mapsRegionSuggestions": "fr",
