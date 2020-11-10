@@ -1,0 +1,31 @@
+{
+  "km": "oui",
+  "compteur": "non",
+  "Approche en forfait": "non",
+  "Approche en km": "non",
+  "Simultane": "oui",
+  "Simultane + personne": "non",
+  "Ticket": "oui",
+  "ViaMichelin": "oui",
+  "Distancier": "non",
+  "Depart (heure)": "oui",
+  "Arrivee (heure)": "oui",
+  "Depart (Lieu)": "oui",
+  "Arrivee (Lieu)": "oui",
+  "Peage": "oui",
+  "Type (AB)": "oui",
+  "Type (CD)": "oui",
+  "Vehicule": "oui",
+  "Prise en charge (lecture seule)": "oui",
+  "Forfait": "oui",
+  "forfaits disponibles": [
+    {"nom": "Forfait 1", "description": "Chambéry 6km", "tarif": 13.85},
+    {"nom": "Forfait 2", "description": "Albertville, Aix les Bains, St Jean de Maurienne 5km", "tarif": 11.99}
+  ],
+  "debutNuit": 19,
+  "finNuit": 7,
+  "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
+  "tpmr": "oui",
+  "mapsRegionSuggestions": "fr",
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20201110-2/templates/default_template.html"
+}
