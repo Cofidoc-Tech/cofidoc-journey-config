@@ -48,7 +48,9 @@
         Caisse&nbsp;: {{{patient.socialSecurityName}}}<br />
         Mutuelle&nbsp;: {{{patient.healthInsuranceName}}}<br />
         Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}<br />
-        <span>Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):</span>
+        <span
+          >Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):</span
+        >
         <br />
         Nom : {{{patient.computedNonInsuranceHolderLastName}}}
         {{{patient.computedNonInsuranceHolderFirstName}}}<br />
@@ -94,6 +96,7 @@
           <th style="width: 6%">TPMR</th>
           <th style="width: 8%">Nb patients</th>
           <th style="width: 8%">P&eacute;age</th>
+          <th>Motif</th>
         </tr>
       </thead>
       <tbody>
@@ -115,6 +118,7 @@
           <td>{{{tpmr}}}</td>
           <td>{{concurrentJourneys}}</td>
           <td>{{toll}}</td>
+          <td>{{shortReason}}</td>
         </tr>
         {{/journeys}}
       </tbody>
