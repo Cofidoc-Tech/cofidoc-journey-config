@@ -20,7 +20,7 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "intramuros", "tarif": 11},
+    {"nom": "Forfait 1", "description": "intra-muros", "tarif": 11},
     {"nom": "Forfait 2", "description": "Orléans / La Source", "tarif": 13}
   ],
   "debutNuit": 19,
