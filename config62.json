@@ -6,7 +6,7 @@
   "Approche en km": "non",
   "Simultane": "oui",
   "Simultane + personne": "non",
-  "Ticket": "oui",
+  "Ticket": "non",
   "ViaMichelin": "oui",
   "Distancier": "non",
   "Depart (heure)": "oui",
@@ -20,13 +20,24 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait minimal jour", "description": "forfait minimal de jour", "tarif": 15},
-    {"nom": "Forfait minimal nuit", "description": "forfait minimal de nuit", "tarif": 22},
-    {"nom": "Forfait 2", "description": "forfait nuit à 25€", "tarif": 25}
+    {
+      "nom": "Forfait minimal jour",
+      "description": "forfait minimal ou intra-muros de jour",
+      "tarif": 15
+    },
+    {
+      "nom": "Forfait minimal nuit",
+      "description": "forfait minimal ou intra-muros de nuit",
+      "tarif": 22
+    },
+    { "nom": "Forfait 2", "description": "forfait nuit à 25€", "tarif": 25 }
   ],
   "debutNuit": 19,
   "finNuit": 7,
-  "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
+  "raison": [
+    "Hospitalisation / chimiothérapie / dialyse",
+    "Consultation / radiothérapie"
+  ],
   "tpmr": "oui",
   "mapsRegionSuggestions": "fr",
   "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20201110-2/templates/default_template.html"
