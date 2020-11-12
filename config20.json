@@ -1,0 +1,48 @@
+{
+  "km": "oui",
+  "compteur": "non",
+  "Prise en charge": "oui",
+  "Approche en forfait": "non",
+  "Approche en km": "oui",
+  "Simultane": "oui",
+  "Simultane + personne": "non",
+  "Ticket": "non",
+  "ViaMichelin": "oui",
+  "Distancier": "non",
+  "Depart (heure)": "oui",
+  "Arrivee (heure)": "oui",
+  "Depart (Lieu)": "oui",
+  "Arrivee (Lieu)": "oui",
+  "Peage": "oui",
+  "Type (AB)": "oui",
+  "Type (CD)": "oui",
+  "Vehicule": "oui",
+  "Prise en charge (lecture seule)": "oui",
+  "Forfait": "oui",
+  "forfaits disponibles": [
+    {
+      "nom": "Forfait zone urbaine Ajaccio",
+      "description": "Forfait zone urbaine Ajaccio",
+      "tarif": 18
+    },
+    {
+      "nom": "Forfait zone urbaine Porto Vecchio",
+      "description": "Forfait zone urbaine Porto Vecchio",
+      "tarif": 18
+    },
+    {
+      "nom": "Forfait minimum",
+      "description": "forfait 0 à 6 km",
+      "tarif": 15
+    }
+  ],
+  "debutNuit": 19,
+  "finNuit": 7,
+  "raison": [
+    "Hospitalisation / chimiothérapie / dialyse",
+    "Consultation / radiothérapie"
+  ],
+  "tpmr": "oui",
+  "mapsRegionSuggestions": "fr",
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20201110-2/templates/default_template.html"
+}
