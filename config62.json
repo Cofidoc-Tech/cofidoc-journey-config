@@ -29,8 +29,7 @@
       "nom": "Forfait minimal nuit",
       "description": "forfait minimal ou intra-muros de nuit",
       "tarif": 22
-    },
-    { "nom": "Forfait 2", "description": "forfait nuit à 25€", "tarif": 25 }
+    }
   ],
   "debutNuit": 19,
   "finNuit": 7,
