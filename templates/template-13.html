@@ -1,234 +1,272 @@
 <html>
-<style>
-  html {
-    padding: 10px;
-    font-family: Arial;
-    --titleColor: rgb(65, 120, 176);
-    --table-font-size: 10px;
-    font-size: 11px;
-  }
-  body > :not(:last-child) {
-    margin-bottom: 10px;
-  }
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    height: 18px;
-    font-size: var(--table-font-size);
-  }
-  th,
-  td {
-    border: 1px solid black;
-    padding-left: 5px;
-    font-weight: normal;
-  }
-  .alignedTop {
-    vertical-align: top;
-  }
-  td:not(.alignedTop) {
-    text-align: center;
-  }
+  <style>
+    html {
+      padding: 10px;
+      font-family: Arial;
+      --titleColor: rgb(65, 120, 176);
+      --table-font-size: 9px;
+      font-size: 10px;
+    }
+    body > :not(:last-child) {
+      margin-bottom: 10px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      height: 18px;
+      font-size: var(--table-font-size);
+    }
+    th,
+    td {
+      border: 1px solid black;
+      padding-left: 5px;
+      font-weight: normal;
+    }
+    .alignedTop {
+      vertical-align: top;
+    }
+    td:not(.alignedTop) {
+      text-align: center;
+    }
 
-  .patientAndTaxiInfo {
-    display: flex;
-    flex-direction: row;
-  }
-  .header {
-    color: var(--titleColor);
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-  .title {
-    color: white;
-    display: flex;
-    justify-content: center;
-  }
-  .title > :only-child {
-    background-color: var(--titleColor);
-  }
+    .patientAndTaxiInfo {
+      display: flex;
+      flex-direction: row;
+    }
 
-  .footer > * {
-    border: 1px solid black;
-    border-bottom: none;
-  }
-  .footer > :last-child {
-    border: 1px solid black;
-    min-height: 100px;
-  }
-</style>
-<body>
-<div class="header">ANNEXE 4</div>
-<div class="title">
-  <span> ANNEXE A LA FACTURE VALANT ATTESTATION DE SERVICE FAIT </span>
-</div>
+    .title {
+      color: white;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+    }
 
-<p>
-  En application de l'article 7.2, cette annexe sign&eacute;e par le patient
-  est transmise par l'entreprise de taxi conventionn&eacute;e afin
-  d'attester de la r&eacute;alit&eacute; de la r&eacute;alisation du
-  transport du patient.
-</p>
-<div class="patientAndTaxiInfo">
-  <div style="flex: 2; border: 1px solid black; padding: 5px">
-    <div><strong>RENSEIGNEMENTS CONCERNANT L'ASSURE(E)</strong></div>
-    <div>
-      N&deg; de s&eacute;curit&eacute; sociale :
-      {{{patient.socialSecurityNumber}}}
+    .big {
+      font-size: 1rem;
+    }
+
+    .footer > :last-child {
+      min-height: 100px;
+    }
+
+    .headerContainer {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .logo {
+      margin-right: 100px;
+    }
+    .headerBox {
+      border: 1px solid black;
+    }
+    .vertical {
+      writing-mode: vertical-rl;
+    }
+    .smallText {
+      font-size: 8px;
+    }
+  </style>
+  <body>
+    <div class="headerContainer">
+      <img
+        src="data:image/jpeg;base64,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"
+        class="logo"
+      />
+      <div class="headerBox">
+        <div class="title big">
+          TAXI CONVENTIONN&Eacute;S DES BOUCHES-DU-RH&Ocirc;NE
+        </div>
+        <div style="padding: 1rem">
+          <div class="big">
+            ANNEXE A LA FACTURE VALANT ATTESTATION DE SERVICE FAIT
+          </div>
+          <div class="big"><strong>A JOINDRE OBLIGATOIREMENT</strong></div>
+          <div>
+            En application de l'article 7.2 de la convention locale, cette
+            annexe sign&eacute;e par le patient est transmise par l'entreprise
+            de taxi conventionn&eacute;e afin d'attester de la
+            r&eacute;alit&eacute; de la r&eacute;alisation du transport du
+            patient.
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      Nom patronymique&nbsp;: {{{patient.computedInsuranceHolderLastName}}}
-    </div>
-    <div>Nom d'usage (facultatif)&nbsp;:</div>
-    <div>
-      Pr&eacute;noms : {{{patient.computedInsuranceHolderFirstName}}}
+    <div class="headerContainer">
+      <div class="title big" style="flex: 1">NUM&Eacute;RO DE FACTURE :</div>
+      <div class="headerBox" style="flex: 2"></div>
     </div>
 
-    <div>Date de naissance : {{{patient.formattedDateOfBirth}}}</div>
-    <span style="font-weight: bold"
-    >Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):
+    <div class="patientAndTaxiInfo">
+      <div style="flex: 2; border: 1px solid black; padding: 5px">
+        <div><strong>RENSEIGNEMENTS CONCERNANT L'ASSURE(E)</strong></div>
+        <div>N&deg; SS : {{{patient.socialSecurityNumber}}}</div>
+        <div>
+          Nom patronymique&nbsp; (nom de naissance) :
+          {{{patient.computedInsuranceHolderLastName}}}
+        </div>
+        <div>Nom d'usage (facultatif)&nbsp;:</div>
+        <div>
+          Pr&eacute;noms : {{{patient.computedInsuranceHolderFirstName}}}
+        </div>
+
+        <span style="font-weight: bold"
+          >Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):
         </span>
 
-    <div>
-      Nom patronymique: {{{patient.computedNonInsuranceHolderLastName}}}
-    </div>
-    <div>Nom d'usage:</div>
-    <div>
-      Pr&eacute;noms : {{{patient.computedNonInsuranceHolderFirstName}}}
-    </div>
-  </div>
-  <div style="width: 10px"></div>
-  <div style="flex: 2; border: 1px solid black; padding: 5px">
-    <div>IDENTIFICATION DE L'ENTREPRISE (cachet)</div>
-    <div>Num&eacute;ro d'identification</div>
-    <div style="white-space: pre">{{{enterprise.nameAndAddress}}}</div>
-    <div>Chauffeur (nom/pr&eacute;nom) :</div>
-    <div>{{{user.lastName}}} {{{user.firstName}}}</div>
-    <div>V&eacute;hicule (n&deg; min&eacute;ralogique) : {{{car}}}</div>
-    <div style="margin-top: 10px">
-      Signature taxi
-      <span style="position: relative">
-            <img
-                    src="data:image/png;base64,{{{enterprise.signature}}}"
-                    style="
-                width: 100px;
-                height: auto;
-                position: absolute;
-                top: -80px;
-                left: 160px;
-                background-color: transparent;
-              "
-            />
-          </span>
-    </div>
-  </div>
-</div>
-
-<table>
-  <thead>
-  <tr>
-    <th style="width: 25%">
-      <div class="cellHeader">DEPART</div>
-      <div>Date</div>
-      <div>Heure</div>
-      <div>Lieu de prise en charge</div>
-    </th>
-    <th style="width: 25%">
-      <div class="cellHeader">ARRIVEE</div>
-      <div>Date</div>
-      <div>Heure</div>
-      <div>Lieu de prise en charge</div>
-    </th>
-    <th style="width: 8%" class="cellHeader">Distance km</th>
-    <th style="width: 10%" class="cellHeader">
-      Nombre de patients transport&eacute;s
-    </th>
-    <th>Code(s) tarif</th>
-    <th style="width: 12%" class="cellHeader">
-      A cocher si transport TPMR
-    </th>
-    <th style="width: 12%" class="cellHeader">
-      Forfait d'attente ou Marche lente
-    </th>
-    <th style="width: 8%" class="cellHeader">
-      <div>P&eacute;age</div>
-    </th>
-    <th>Base de remboursement</th>
-    <th>Motif</th>
-  </tr>
-  </thead>
-  <tbody>
-  {{#journeys}}
-  <tr>
-    <td class="alignedTop">
-      <div>{{{formattedDepartureDate}}}</div>
-      <div>{{formattedDepartureTime}}</div>
-      <div>{{{formattedDepartureLocation}}}</div>
-    </td>
-    <td class="alignedTop">
-      <div>{{{formattedArrivalDate}}}</div>
-      <div>{{formattedArrivalTime}}</div>
-      <div>{{{formattedArrivalLocation}}}</div>
-    </td>
-    <td>{{dayTimeKm}}</td>
-    <td>{{concurrentJourneys}}</td>
-    <td>{{{journeyType}}}</td>
-    <td>{{{tpmr}}}</td>
-    <td></td>
-    <td>{{toll}}</td>
-    <td></td>
-    <td>{{shortReason}}</td>
-  </tr>
-  {{/journeys}}
-  </tbody>
-</table>
-
-<div class="footer">
-  <div>ATTESTATION DE L'ASSURE(E)</div>
-  <div>
-    <div>
-      L'assur&eacute;(e), ou la personne transport&eacute;e, ou son
-      repr&eacute;sentant l&eacute;gal, atteste de la r&eacute;alit&eacute;
-      et des conditions du (des) transports d&eacute;taill&eacute;(s)
-      ci-dessus.
-    </div>
-    <div
+        <div>
+          Nom patronymique : {{{patient.computedNonInsuranceHolderLastName}}}
+        </div>
+        <div>Nom d'usage (facultatif) :</div>
+        <div>
+          Pr&eacute;noms : {{{patient.computedNonInsuranceHolderFirstName}}}
+        </div>
+        <div>Date de naissance : {{{patient.formattedDateOfBirth}}}</div>
+      </div>
+      <div style="width: 10px"></div>
+      <div style="flex: 2; border: 1px solid black; padding: 5px">
+        <div style="position: relative">
+          <img
+            src="data:image/png;base64,{{{enterprise.signature}}}"
             style="
+              width: 100px;
+              height: auto;
+              position: absolute;
+              top: 60px;
+              left: 240px;
+              background-color: transparent;
+            "
+          />
+        </div>
+
+        <div>IDENTIFICATION DE L'ENTREPRISE (cachet)</div>
+        <div>Num&eacute;ro d'identification :</div>
+        <div style="white-space: pre">{{{enterprise.nameAndAddress}}}</div>
+      </div>
+    </div>
+
+    <div class="headerBox">
+      <div class="title big">RENSEIGNEMENTS CONCERNANT LES TRANSPORTS</div>
+
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 20%">
+              <div>D&Eacute;PART</div>
+              <div>Date</div>
+              <div>Heure</div>
+              <div>Lieu de prise en charge</div>
+            </th>
+            <th style="width: 20%">
+              <div>ARRIV&Eacute;E</div>
+              <div>Date</div>
+              <div>Heure</div>
+              <div>Lieu de prise en charge</div>
+            </th>
+            <th style="width: 20%">
+              <div>Nom et pr&eacute;nom du conducteur</div>
+              <div>N&deg; ADS</div>
+              <div>N&deg; min&eacute;ralogique du v&eacute;hicule</div>
+            </th>
+            <th style="width: 5%" class="vertical smallText">Distance km</th>
+            <th style="width: 5%" class="vertical smallText">
+              Nombre de patients transport&eacute;s
+            </th>
+            <th style="width: 5%" class="vertical smallText">Code(s) tarif</th>
+            <th style="width: 5%" class="vertical smallText">
+              A cocher si transport TPMR
+            </th>
+            <th style="width: 5%" class="smallText">
+              Forfait d'attente ou Marche lente
+            </th>
+            <th style="width: 5%" class="smallText">
+              <div>P&eacute;age</div>
+            </th>
+            <th style="width: 5%" class="smallText">Base de remb.</th>
+            <th style="width: 5%" class="smallText">Motif</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#journeys}}
+          <tr>
+            <td class="alignedTop">
+              <div>{{{formattedDepartureDate}}}</div>
+              <div>{{formattedDepartureTime}}</div>
+              <div>{{{formattedDepartureLocation}}}</div>
+            </td>
+            <td class="alignedTop">
+              <div>{{{formattedArrivalDate}}}</div>
+              <div>{{formattedArrivalTime}}</div>
+              <div>{{{formattedArrivalLocation}}}</div>
+            </td>
+            <td>
+              <div>{{{user.lastName}}} {{{user.firstName}}}</div>
+              <div>{{{car.numberplate}}}</div>
+            </td>
+            <td>{{dayTimeKm}}</td>
+            <td>{{concurrentJourneys}}</td>
+            <td>{{{journeyType}}}</td>
+            <td>{{{tpmr}}}</td>
+            <td></td>
+            <td>{{toll}}</td>
+            <td></td>
+            <td>{{shortReason}}</td>
+          </tr>
+          {{/journeys}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="headerBox">
+      <div class="title big">ATTESTATION DE L'ASSUR&Eacute;</div>
+      <div class="footer">
+        <div>
+          L'assur&eacute;(e), ou la personne transport&eacute;e, ou son
+          repr&eacute;sentant l&eacute;gal, atteste de la r&eacute;alit&eacute;
+          et des conditions du (des) transports d&eacute;taill&eacute;(s)
+          ci-dessus.
+        </div>
+        <div
+          style="
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             padding-top: 1rem;
           "
-    >
-      <span>Fait &agrave; {{{doneIn}}} Le {{{now}}}</span>
-      <span> Signature Patient </span>
-      <span style="position: relative">
+        >
+          <span>Fait &agrave; {{{doneIn}}} Le {{{now}}}</span>
+          <span> Signature Patient </span>
+          <span style="position: relative">
             {{#signaturePatient}}
             <img
-                    src="data:image/png;base64,{{{signaturePatient}}}"
-                    style="
-                width: 80px;
+              src="data:image/png;base64,{{{signaturePatient}}}"
+              style="
+                width: 60px;
                 height: auto;
                 position: absolute;
-                top: -20px;
+
                 left: -100px;
                 background-color: transparent;
               "
             />
             {{/signaturePatient}}
           </span>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div>
-  <em style="font-size: 0.75rem">
-    La loi rend passible d&rsquo;amende et/ou d&rsquo;emprisonnement
-    quiconque se rend coupable de fraudes ou de fausses d&eacute;clarations
-    (art. L377-1 du code de la S&eacute;curit&eacute; sociale, 1047 du Code
-    Rural, 441.1 du Code P&eacute;nal)
-  </em>
-</div>
-</body>
+    <div>
+      <em style="font-size: 0.75rem">
+        La loi rend passible d&rsquo;amende et/ou d&rsquo;emprisonnement
+        quiconque se rend coupable de fraudes ou de fausses d&eacute;clarations.
+        (art. 313-1 &aacute; 313-3, 433-19, 441-7 du Code P&eacute;nal)
+      </em>
+      <div>
+        <em style="font-size: 0.75rem">
+          Conform&egrave;ment aux dispositions relatives à la protection des donn&egrave;es personnelles, vous pouvez exercer votre droit d'accès et de rectification des donn&egrave;es vous concernant en vous adressant par courrier au D&egrave;l&egrave;gu&egrave; à la protection des donn&egrave;es (DPO) de la CPAM des Bouches-du-Rhône 56, chemin Joseph Aiguier 13297 - Marseille Cedex 9. En cas de difficult&egrave;s dans l'application des droits &earave;nonc&egrave;s ci-dessus, vous pouvez &egrave;galement introduire une r&egrave;clamation auprès de la Comission Nationale Informatique et Libert&egrave;s (CNIL).
+        </em>
+      </div>
+
+    </div>
+  </body>
 </html>
