@@ -27,5 +27,5 @@
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
   "tpmr": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20201110-2/templates/template-13.html"
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20201117/templates/template-13.html"
 }
