@@ -57,25 +57,25 @@
         Adresse&nbsp;: {{{patient.address}}}
       </div>
       <div style="width: 10px"></div>
-      <div style="flex: 2; border: 1px solid black; padding: 5px">
-        <div>
-          <strong>IDENTIFICATION DE L'ENTREPRISE</strong>
-          <div style="white-space: pre">{{{enterprise.nameAndAddress}}}</div>
-        </div>
-        <div style="margin-top: 10px">
-          Signature taxi
-          <span style="position: relative">
-            <img
-              src="data:image/png;base64,{{{enterprise.signature}}}"
-              style="
-                width: 100px;
-                height: auto;
-                position: absolute;
-                top: -60px;
-                left: 80px;
-              "
-            />
-          </span>
+      <div
+        style="
+          flex: 2;
+          border: 1px solid black;
+          padding: 5px;
+          display: flex;
+          flex-direction: column;
+        "
+      >
+        <strong>IDENTIFICATION DE L'ENTREPRISE</strong>
+        <div style="display: flex; flex-direction: row; flex: 1">
+          <div style="flex: 1">
+            <div style="white-space: pre">{{{enterprise.nameAndAddress}}}</div>
+            <div style="margin-top: 10px">Signature taxi</div>
+          </div>
+          <img
+            src="data:image/png;base64,{{{enterprise.signature}}}"
+            style="width: 100px; height: auto; align-self: flex-end"
+          />
         </div>
       </div>
     </div>
@@ -103,20 +103,20 @@
         <tr>
           <td>{{{formattedDepartureDate}}}</td>
           <td class="alignedTop">
-            <div>{{formattedDepartureTime}}</div>
+            <div>{{{formattedDepartureTime}}}</div>
             <div>{{{formattedDepartureLocation}}}</div>
           </td>
           <td class="alignedTop">
-            <div>{{formattedArrivalTime}}</div>
+            <div>{{{formattedArrivalTime}}}</div>
             <div>{{{formattedArrivalLocation}}}</div>
           </td>
-          <td>{{dayTimeKm}}</td>
-          <td>{{nightTimeKm}}</td>
-          <td>{{forfaitTarif}}</td>
+          <td>{{{dayTimeKm}}}</td>
+          <td>{{{nightTimeKm}}}</td>
+          <td>{{{forfaitTarif}}}</td>
           <td>{{{tpmr}}}</td>
-          <td>{{concurrentJourneys}}</td>
-          <td>{{toll}}</td>
-          <td>{{shortReason}}</td>
+          <td>{{{concurrentJourneys}}}</td>
+          <td>{{{toll}}}</td>
+          <td>{{{shortReason}}}</td>
         </tr>
         {{/journeys}}
       </tbody>
@@ -137,7 +137,7 @@
     <div
       style="display: flex; flex-direction: row; justify-content: space-between"
     >
-      <span>Fait &agrave; {{doneIn}} Le {{{now}}}</span>
+      <span>Fait &agrave; {{{doneIn}}} Le {{{now}}}</span>
       <span> Signature Patient </span>
       <span style="position: relative">
         {{#signaturePatient}}
