@@ -124,24 +124,39 @@
         <div>Date de naissance : {{{patient.formattedDateOfBirth}}}</div>
       </div>
       <div style="width: 10px"></div>
-      <div style="flex: 2; border: 1px solid black; padding: 5px">
-        <div style="position: relative">
+      <div
+        style="
+          flex: 2;
+          border: 1px solid black;
+          padding: 5px;
+          display: flex;
+          flex-direction: column;
+        "
+      >
+        <div>IDENTIFICATION DE L'ENTREPRISE (cachet)</div>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex: 1;
+          "
+        >
+          <div>
+            <div>Num&eacute;ro d'identification :</div>
+            <div style="white-space: pre">{{{enterprise.nameAndAddress}}}</div>
+          </div>
+
           <img
             src="data:image/png;base64,{{{enterprise.signature}}}"
             style="
               width: 100px;
               height: auto;
-              position: absolute;
-              top: 60px;
-              left: 240px;
               background-color: transparent;
+              align-self: flex-end;
             "
           />
         </div>
-
-        <div>IDENTIFICATION DE L'ENTREPRISE (cachet)</div>
-        <div>Num&eacute;ro d'identification :</div>
-        <div style="white-space: pre">{{{enterprise.nameAndAddress}}}</div>
       </div>
     </div>
 
@@ -191,26 +206,26 @@
           <tr>
             <td class="alignedTop">
               <div>{{{formattedDepartureDate}}}</div>
-              <div>{{formattedDepartureTime}}</div>
+              <div>{{{formattedDepartureTime}}}</div>
               <div>{{{formattedDepartureLocation}}}</div>
             </td>
             <td class="alignedTop">
               <div>{{{formattedArrivalDate}}}</div>
-              <div>{{formattedArrivalTime}}</div>
+              <div>{{{formattedArrivalTime}}}</div>
               <div>{{{formattedArrivalLocation}}}</div>
             </td>
             <td>
               <div>{{{user.lastName}}} {{{user.firstName}}}</div>
               <div>{{{car.numberplate}}}</div>
             </td>
-            <td>{{dayTimeKm}}</td>
-            <td>{{concurrentJourneys}}</td>
+            <td>{{{dayTimeKm}}}</td>
+            <td>{{{concurrentJourneys}}}</td>
             <td>{{{journeyType}}}</td>
             <td>{{{tpmr}}}</td>
             <td></td>
-            <td>{{toll}}</td>
+            <td>{{{toll}}}</td>
             <td></td>
-            <td>{{shortReason}}</td>
+            <td>{{{shortReason}}}</td>
           </tr>
           {{/journeys}}
         </tbody>
@@ -263,10 +278,17 @@
       </em>
       <div>
         <em style="font-size: 0.75rem">
-          Conform&egrave;ment aux dispositions relatives à la protection des donn&egrave;es personnelles, vous pouvez exercer votre droit d'accès et de rectification des donn&egrave;es vous concernant en vous adressant par courrier au D&egrave;l&egrave;gu&egrave; à la protection des donn&egrave;es (DPO) de la CPAM des Bouches-du-Rhône 56, chemin Joseph Aiguier 13297 - Marseille Cedex 9. En cas de difficult&egrave;s dans l'application des droits &earave;nonc&egrave;s ci-dessus, vous pouvez &egrave;galement introduire une r&egrave;clamation auprès de la Comission Nationale Informatique et Libert&egrave;s (CNIL).
+          Conform&egrave;ment aux dispositions relatives à la protection des
+          donn&egrave;es personnelles, vous pouvez exercer votre droit d'accès
+          et de rectification des donn&egrave;es vous concernant en vous
+          adressant par courrier au D&egrave;l&egrave;gu&egrave; à la protection
+          des donn&egrave;es (DPO) de la CPAM des Bouches-du-Rhône 56, chemin
+          Joseph Aiguier 13297 - Marseille Cedex 9. En cas de difficult&egrave;s
+          dans l'application des droits &eacute;nonc&egrave;s ci-dessus, vous
+          pouvez &egrave;galement introduire une r&egrave;clamation auprès de la
+          Comission Nationale Informatique et Libert&egrave;s (CNIL).
         </em>
       </div>
-
     </div>
   </body>
 </html>
