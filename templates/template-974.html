@@ -74,6 +74,7 @@
 
       .enterprise {
         vertical-align: top;
+        height: 100%;
       }
 
       .notTheInsuredPerson {
@@ -112,19 +113,21 @@
             <div>{{{patient.socialSecurityNumber}}}</div>
           </td>
           <td rowspan="4" class="enterprise">
-            <div class="flex enterprise">{{{enterprise.nameAndAddress}}}</div>
-            <span style="position: relative">
+            <div
+              style="
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+              "
+            >
+              <div class="flex enterprise">{{{enterprise.nameAndAddress}}}</div>
+
               <img
                 src="data:image/png;base64,{{{enterprise.signature}}}"
-                style="
-                  width: 100px;
-                  height: auto;
-                  position: absolute;
-                  top: -60px;
-                  left: 80px;
-                "
+                style="align-self: flex-end; width: 100px"
               />
-            </span>
+            </div>
           </td>
         </tr>
         <tr>
@@ -202,8 +205,8 @@
           </td>
           <td>{{concurrentJourneys}}</td>
           <td>{{{tpmr}}}</td>
-          <td>{{toll}}</td>
-          <td>{{shortReason}}</td>
+          <td>{{{toll}}} {{{forfaitTarif}}}</td>
+          <td>{{{shortReason}}}</td>
         </tr>
         {{/journeys}}
       </tbody>
@@ -218,7 +221,7 @@
         ci-dessus.
 
         <div class="signatureData">
-          <span>Fait &agrave; {{doneIn}}</span><span>Le {{{now}}}</span
+          <span>Fait &agrave; {{{doneIn}}}</span><span>Le {{{now}}}</span
           ><span>Signature </span>
           <span style="position: relative">
             {{#signaturePatient}}
