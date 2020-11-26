@@ -21,7 +21,7 @@
   "Forfait": "oui",
   "forfaits disponibles": [
     {"nom": "Forfait accompagnant", "description": "", "tarif": 12},
-    {"nom": "Trajet court", "description": "", "tarif": 25}
+    {"nom": "Forfait TPMR", "description": "", "tarif": 25}
   ],
   "debutNuit": 19,
   "finNuit": 6,
