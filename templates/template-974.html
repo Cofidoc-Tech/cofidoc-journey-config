@@ -121,7 +121,10 @@
                 justify-content: space-between;
               "
             >
-              <div class="flex enterprise">{{{enterprise.nameAndAddress}}}</div>
+              <div class="flex enterprise">
+                <div>{{{enterprise.nameAndAddress}}}</div>
+                <div>Véhicule: {{{car}}}</div>
+              </div>
 
               <img
                 src="data:image/png;base64,{{{enterprise.signature}}}"
