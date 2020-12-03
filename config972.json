@@ -1,0 +1,31 @@
+{
+  "km": "oui",
+  "compteur": "non",
+  "Approche en forfait": "non",
+  "Approche en km": "non",
+  "Simultane": "oui",
+  "Simultane + personne": "oui",
+  "Ticket": "oui",
+  "ViaMichelin": "oui",
+  "Distancier": "non",
+  "Depart (heure)": "oui",
+  "Arrivee (heure)": "oui",
+  "Depart (Lieu)": "oui",
+  "Arrivee (Lieu)": "oui",
+  "Peage": "non",
+  "Type (AB)": "oui",
+  "Type (CD)": "oui",
+  "Vehicule": "oui",
+  "Prise en charge (lecture seule)": "oui",
+  "Forfait": "non",
+  "Prise en charge": "oui",
+  "debutNuit": 19,
+  "finNuit": 6,
+  "raison": [
+    "Hospitalisation / chimiothérapie / dialyse",
+    "Consultation / radiothérapie"
+  ],
+  "tpmr": "oui",
+  "mapsRegionSuggestions": "mq",
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20201202/templates/default_template.html"
+}
