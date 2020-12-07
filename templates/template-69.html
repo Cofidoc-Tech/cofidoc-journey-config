@@ -82,7 +82,12 @@
     </div>
 
     <table
-      style="border-collapse: collapse; width: 100%; height: 18px"
+      style="
+        border-collapse: collapse;
+        width: 100%;
+        height: 18px;
+        margin-bottom: 0;
+      "
       border="1"
     >
       <thead>
@@ -113,7 +118,10 @@
           </td>
           <td>{{{dayTimeKm}}}</td>
           <td>{{{nightTimeKm}}}</td>
-          <td>{{{forfaitTarif}}}</td>
+          <td>
+            <div>{{forfaitTarif}}</div>
+            <div>{{#snow}}N<sup>*</sup>{{/snow}}{{#ice}}V<sup>*</sup>{{/ice}}</div>
+          </td>
           <td>{{{tpmr}}}</td>
           <td>{{{concurrentJourneys}}}</td>
           <td>{{{toll}}}</td>
@@ -122,6 +130,9 @@
         {{/journeys}}
       </tbody>
     </table>
+    <em style="font-size: 0.75rem">
+      {{#needSnowIceLegend}}N: Neige, V: Verglas{{/needSnowIceLegend}}
+    </em>
     <p>
       <strong>SUBROGATION</strong> : L'assur&eacute;(e) autorise le versement
       direct au transporteur du montant remboursable du(des) transport(s)
