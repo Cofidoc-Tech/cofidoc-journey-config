@@ -23,8 +23,8 @@
   "finNuit": 7,
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
   "tpmr": "oui",
-  "neige": "oui",
-  "verglas": "oui",
+  "neige": "non",
+  "verglas": "non",
   "mapsRegionSuggestions": "fr",
   "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20201207/templates/template-43.html"
 }
