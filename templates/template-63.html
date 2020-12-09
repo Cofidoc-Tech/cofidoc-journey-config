@@ -1,0 +1,161 @@
+<html>
+  <style>
+    html {
+      padding: 10px;
+      font-family: Arial;
+      --table-font-size: 10px;
+      font-size: 11px;
+    }
+
+    table {
+      font-size: var(--table-font-size);
+    }
+    th,
+    td {
+      border: 1px solid black;
+      margin: 0 2px;
+    }
+    td:not(.alignedTop) {
+      text-align: center;
+    }
+    .underlined {
+      text-decoration: underline;
+    }
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .border {
+      border: 1px solid black;
+      padding: 2px 5px;
+    }
+  </style>
+  <body>
+    <h4 style="text-align: center">
+      <div style="text-decoration: underline">ANNEXE 4</div>
+      <div>ANNEXE A LA FACTURE</div>
+    </h4>
+    <div>
+      En application de l'article 7.2, cette annexe sign&eacute;e par le patient
+      est transmise par l'entreprise de taxi conventionn&eacute;e afin
+      d'attester de la r&eacute;alit&eacute; de la r&eacute;alisation du
+      transport patient. Conformément aux négociations avec les représentants des syndicats, cette annexe n'est utilisée que pour les transports en série en cas de panne de l'édition de note, aussi appelée "facturette".
+    </div>
+    <div>Numéro de facture :</div>
+
+    <div style="display: flex; flex-direction: row">
+      <div class="border" style="flex: 1">
+      <div>RENSEIGNEMENTS CONCERNANT L'ASSUR&Eacute;(E)</div>
+        <div>N&deg; de sécurité sociale : {{{patient.socialSecurityNumber}}}</div>
+        <div>Nom patronymique&nbsp;: {{{patient.computedInsuranceHolderLastName}}}</div>
+        <div>Nom d'usage (facultatif)&nbsp;:</div>
+        <div>
+          Pr&eacute;noms : {{{patient.computedInsuranceHolderFirstName}}}
+        </div>
+        <strong>Si la personne n'est pas l'assuré(e)</strong>
+        <div>Nom patronymique&nbsp;: {{{patient.computedNonInsuranceHolderLastName}}}</div>
+        <div>Nom d'usage (facultatif)&nbsp;:</div>
+        <div>
+          Pr&eacute;noms : {{{patient.computedNonInsuranceHolderFirstName}}}
+        </div>
+        <div>Caisse&nbsp;: {{{patient.socialSecurityName}}}</div>
+        <div>Mutuelle&nbsp;: {{{patient.healthInsuranceName}}}</div>
+      </div>
+
+      <div
+        class="border"
+        style="flex: 1; display: flex; flex-direction: column"
+      >
+      <div>IDENTIFICATION DE L'ENTREPRISE (cachet)</div>
+        <div>{{{enterprise.nameAndAddress}}}</div>
+      </div>
+    </div>
+
+    <table
+      style="border-collapse: collapse; width: 100%; height: 18px"
+      border="1"
+    >
+      <thead>
+        <tr>
+          <th style="width: 2%"></th>
+          <th style="width: 22%">
+            <div>DEPART</div>
+            <div>date - heure</div>
+            <div>Lieu de prise en charge</div>
+          </th>
+          <th style="width: 22%">
+            <div>ARRIVEE</div>
+            <div>date - heure</div>
+            <div>Lieu de prise en charge</div>
+          </th>
+          <th>IMMATRICULATION</th>
+          <th style="width: 8%">Nombre de km</th>
+          <th style="width: 8%">Nom du chauffeur</th>
+          <th style="width: 8%">Nombre de patients transport&eacute;s</th>
+          <th>A cocher en cas de transport réalisé pour un patient à mobilité réduite</th>
+          <th style="width: 8%">
+            <div>Suppl&eacute;ments remboursables</div>
+            <div>routes payantes</div>
+          </th>
+          <th>Motif*</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#journeys}}
+        <tr>
+          <td>{{index}}</td>
+          <td>
+            {{{formattedDepartureDate}}} - {{formattedDepartureTime}}
+            <div>{{{formattedDepartureLocation}}}</div>
+          </td>
+          <td>
+            {{{formattedArrivalDate}}} - {{formattedArrivalTime}}
+            <div>{{{formattedArrivalLocation}}}</div>
+          </td>
+          <td>{{{car.numberplate}}}</td>
+          <td>
+            <div>{{#dayTimeKm}} jour: {{{dayTimeKm}}} {{/dayTimeKm}}</div>
+            <div>{{#nightTimeKm}} nuit: {{{nightTimeKm}}} {{/nightTimeKm}}</div>
+          </td>
+          <td>{{{user.lastName}}}</td>
+          <td>{{concurrentJourneys}}</td>
+          <td>{{{tpmr}}}</td>
+          <td>{{{forfaitTarif}}}{{{toll}}}</td>
+          <td>{{shortReason}}</td>
+        </tr>
+        {{/journeys}}
+      </tbody>
+    </table>
+
+    <div class="row" style="width: 75%">
+      *H: Hospitalisation / chimiothérapie / dialyse, C: Consultation / radiothérapie
+    </div>
+
+
+    <div class="border">
+    <div style="border-bottom: 1px solid black; text-align: center">ATTESTATION DE L'ASSURE(E)</div>
+        <div>L'assur&eacute;(e), ou la personne
+        transport&eacute;e ou son repr&eacute;sentant atteste de la
+        r&eacute;alit&eacute; et des conditions du (des) transports
+        d&eacute;taill&eacute;(s) ci-dessus.
+        </div>
+        <div style="display: flex; flex-direction: row; justify-content: space-between">
+            <div>Fait &aacute; {{{doneIn}}} le {{{now}}}</div>
+            <div>
+                Signature
+                <span style="position: relative">
+                    <img
+                    src="data:image/png;base64,{{{signaturePatient}}}"
+                    style="
+                    width: 80px;
+                    height: auto;
+                    min-height: 50px;
+                    "
+                    />
+                </span>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
