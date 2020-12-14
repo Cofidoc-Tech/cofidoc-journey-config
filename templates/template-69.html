@@ -3,13 +3,13 @@
     html {
       padding: 10px;
       font-family: Arial;
-      --table-font-size: 10px;
+      --table-font-size: 9px;
       font-size: 11px;
     }
     body > :not(:last-child) {
       margin-bottom: 10px;
     }
-    table {
+    table * {
       font-size: var(--table-font-size);
     }
     th,
@@ -70,7 +70,6 @@
         <div style="display: flex; flex-direction: row; flex: 1">
           <div style="flex: 1">
             <div>{{{enterprise.nameAndAddress}}}</div>
-            <div>V&eacute;hicule: {{{car}}}</div>
             <div style="margin-top: 10px">Signature taxi</div>
           </div>
           <img
@@ -92,6 +91,7 @@
     >
       <thead>
         <tr>
+          <th>Véhicule</th>
           <th style="width: 10%">Date</th>
           <th style="width: 20%">D&eacute;part (heure et lieu)</th>
           <th style="width: 20%">Arriv&eacute;e (heure et lieu)</th>
@@ -107,6 +107,7 @@
       <tbody>
         {{#journeys}}
         <tr>
+          <td>{{{car.numberplate}}}</td>
           <td>{{{formattedDepartureDate}}}</td>
           <td class="alignedTop">
             <div>{{{formattedDepartureTime}}}</div>
@@ -120,7 +121,9 @@
           <td>{{{nightTimeKm}}}</td>
           <td>
             <div>{{forfaitTarif}}</div>
-            <div>{{#snow}}N<sup>*</sup>{{/snow}}{{#ice}}V<sup>*</sup>{{/ice}}</div>
+            <div>
+              {{#snow}}N<sup>*</sup>{{/snow}}{{#ice}}V<sup>*</sup>{{/ice}}
+            </div>
           </td>
           <td>{{{tpmr}}}</td>
           <td>{{{concurrentJourneys}}}</td>
