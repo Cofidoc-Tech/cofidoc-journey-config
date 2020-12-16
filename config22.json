@@ -26,6 +26,8 @@
     "Consultation / radiothérapie"
   ],
   "tpmr": "oui",
+  "neige": "oui",
+  "verglas": "oui",
   "mapsRegionSuggestions": "fr",
   "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20201203/templates/template-22.html"
 }
