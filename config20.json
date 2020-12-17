@@ -44,7 +44,7 @@
   ],
   "tpmr": "oui",
   "neige": "oui",
-  "verglas": "oui",
+  "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
   "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20201207/templates/default_template.html"
 }
