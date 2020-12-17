@@ -82,7 +82,12 @@
     </div>
 
     <table
-      style="border-collapse: collapse; width: 100%; height: 18px"
+      style="
+        border-collapse: collapse;
+        width: 100%;
+        height: 18px;
+        margin-bottom: 0;
+      "
       border="1"
     >
       <thead>
@@ -145,12 +150,18 @@
             <div>{{#toll}}P: {{{toll}}}{{/toll}}</div>
             <div>{{#tpmr}}TMPR{{/tpmr}}</div>
           </td>
-          <td>{{forfaitTarif}}</td>
+          <td>
+            <div>{{forfaitTarif}}</div>
+            <div>{{#snow}}N<sup>*</sup>{{/snow}}</div>
+          </td>
           <td>{{shortReason}}</td>
         </tr>
         {{/journeys}}
       </tbody>
     </table>
+    <em style="font-size: 0.75rem">
+      {{#needSnowIceLegend}}N: Neige / Verglas{{/needSnowIceLegend}}
+    </em>
 
     <div class="row" style="width: 75%">
       <div>* A: Attente</div>

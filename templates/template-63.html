@@ -40,21 +40,30 @@
       En application de l'article 7.2, cette annexe sign&eacute;e par le patient
       est transmise par l'entreprise de taxi conventionn&eacute;e afin
       d'attester de la r&eacute;alit&eacute; de la r&eacute;alisation du
-      transport patient. Conformément aux négociations avec les représentants des syndicats, cette annexe n'est utilisée que pour les transports en série en cas de panne de l'édition de note, aussi appelée "facturette".
+      transport patient. Conformément aux négociations avec les représentants
+      des syndicats, cette annexe n'est utilisée que pour les transports en
+      série en cas de panne de l'édition de note, aussi appelée "facturette".
     </div>
     <div>Numéro de facture :</div>
 
     <div style="display: flex; flex-direction: row">
       <div class="border" style="flex: 1">
-      <div>RENSEIGNEMENTS CONCERNANT L'ASSUR&Eacute;(E)</div>
-        <div>N&deg; de sécurité sociale : {{{patient.socialSecurityNumber}}}</div>
-        <div>Nom patronymique&nbsp;: {{{patient.computedInsuranceHolderLastName}}}</div>
+        <div>RENSEIGNEMENTS CONCERNANT L'ASSUR&Eacute;(E)</div>
+        <div>
+          N&deg; de sécurité sociale : {{{patient.socialSecurityNumber}}}
+        </div>
+        <div>
+          Nom patronymique&nbsp;: {{{patient.computedInsuranceHolderLastName}}}
+        </div>
         <div>Nom d'usage (facultatif)&nbsp;:</div>
         <div>
           Pr&eacute;noms : {{{patient.computedInsuranceHolderFirstName}}}
         </div>
         <strong>Si la personne n'est pas l'assuré(e)</strong>
-        <div>Nom patronymique&nbsp;: {{{patient.computedNonInsuranceHolderLastName}}}</div>
+        <div>
+          Nom patronymique&nbsp;:
+          {{{patient.computedNonInsuranceHolderLastName}}}
+        </div>
         <div>Nom d'usage (facultatif)&nbsp;:</div>
         <div>
           Pr&eacute;noms : {{{patient.computedNonInsuranceHolderFirstName}}}
@@ -67,7 +76,7 @@
         class="border"
         style="flex: 1; display: flex; flex-direction: column"
       >
-      <div>IDENTIFICATION DE L'ENTREPRISE (cachet)</div>
+        <div>IDENTIFICATION DE L'ENTREPRISE (cachet)</div>
         <div>{{{enterprise.nameAndAddress}}}</div>
       </div>
     </div>
@@ -93,7 +102,10 @@
           <th style="width: 8%">Nombre de km</th>
           <th style="width: 8%">Nom du chauffeur</th>
           <th style="width: 8%">Nombre de patients transport&eacute;s</th>
-          <th>A cocher en cas de transport réalisé pour un patient à mobilité réduite</th>
+          <th>
+            A cocher en cas de transport réalisé pour un patient à mobilité
+            réduite
+          </th>
           <th style="width: 8%">
             <div>Suppl&eacute;ments remboursables</div>
             <div>routes payantes</div>
@@ -121,41 +133,51 @@
           <td>{{{user.lastName}}}</td>
           <td>{{concurrentJourneys}}</td>
           <td>{{{tpmr}}}</td>
-          <td>{{{forfaitTarif}}}{{{toll}}}</td>
+          <td>
+            {{{forfaitTarif}}} {{{toll}}}
+            <div>{{#snow}}N<sup>*</sup>{{/snow}}</div>
+          </td>
           <td>{{shortReason}}</td>
         </tr>
         {{/journeys}}
       </tbody>
     </table>
+    <em style="font-size: 0.75rem">
+      {{#needSnowIceLegend}}N: Neige / Verglas{{/needSnowIceLegend}}
+    </em>
 
     <div class="row" style="width: 75%">
-      *H: Hospitalisation / chimiothérapie / dialyse, C: Consultation / radiothérapie
+      *H: Hospitalisation / chimiothérapie / dialyse, C: Consultation /
+      radiothérapie
     </div>
 
-
     <div class="border">
-    <div style="border-bottom: 1px solid black; text-align: center">ATTESTATION DE L'ASSURE(E)</div>
-        <div>L'assur&eacute;(e), ou la personne
-        transport&eacute;e ou son repr&eacute;sentant atteste de la
-        r&eacute;alit&eacute; et des conditions du (des) transports
-        d&eacute;taill&eacute;(s) ci-dessus.
+      <div style="border-bottom: 1px solid black; text-align: center">
+        ATTESTATION DE L'ASSURE(E)
+      </div>
+      <div>
+        L'assur&eacute;(e), ou la personne transport&eacute;e ou son
+        repr&eacute;sentant atteste de la r&eacute;alit&eacute; et des
+        conditions du (des) transports d&eacute;taill&eacute;(s) ci-dessus.
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        "
+      >
+        <div>Fait &aacute; {{{doneIn}}} le {{{now}}}</div>
+        <div>
+          Signature
+          <span style="position: relative">
+            <img
+              src="data:image/png;base64,{{{signaturePatient}}}"
+              style="width: 80px; height: auto; min-height: 50px"
+            />
+          </span>
         </div>
-        <div style="display: flex; flex-direction: row; justify-content: space-between">
-            <div>Fait &aacute; {{{doneIn}}} le {{{now}}}</div>
-            <div>
-                Signature
-                <span style="position: relative">
-                    <img
-                    src="data:image/png;base64,{{{signaturePatient}}}"
-                    style="
-                    width: 80px;
-                    height: auto;
-                    min-height: 50px;
-                    "
-                    />
-                </span>
-            </div>
-        </div>
+      </div>
     </div>
   </body>
 </html>

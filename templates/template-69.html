@@ -121,9 +121,7 @@
           <td>{{{nightTimeKm}}}</td>
           <td>
             <div>{{forfaitTarif}}</div>
-            <div>
-              {{#snow}}N<sup>*</sup>{{/snow}}{{#ice}}V<sup>*</sup>{{/ice}}
-            </div>
+            <div>{{#snow}}N<sup>*</sup>{{/snow}}</div>
           </td>
           <td>{{{tpmr}}}</td>
           <td>{{{concurrentJourneys}}}</td>
@@ -134,7 +132,7 @@
       </tbody>
     </table>
     <em style="font-size: 0.75rem">
-      {{#needSnowIceLegend}}N: Neige, V: Verglas{{/needSnowIceLegend}}
+      {{#needSnowIceLegend}}N: Neige / Verglas{{/needSnowIceLegend}}
     </em>
     <p>
       <strong>SUBROGATION</strong> : L'assur&eacute;(e) autorise le versement
