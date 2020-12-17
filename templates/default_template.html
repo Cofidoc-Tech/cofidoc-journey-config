@@ -26,11 +26,11 @@
   </style>
   <body>
     <h4 style="text-align: center">
-      <span style="text-decoration: underline"
-        ><strong
+          <span style="text-decoration: underline"
+          ><strong
           >ANNEXE 4 - ANNEXE A LA FACTURE VALANT ATTESTATION DE SERVICE FAIT
-        </strong>
-      </span>
+            </strong>
+          </span>
     </h4>
     <p>
       Cette annexe sign&eacute;e par le patient est transmise par l'entreprise
@@ -48,12 +48,10 @@
         Caisse&nbsp;: {{{patient.socialSecurityName}}}<br />
         Mutuelle&nbsp;: {{{patient.healthInsuranceName}}}<br />
         Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}<br />
-        <span
-          >Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):</span
-        >
-        <br />
-        Nom : {{{patient.computedNonInsuranceHolderLastName}}}
-        {{{patient.computedNonInsuranceHolderFirstName}}}<br />
+        <div>Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):</div>
+        <div>Nom : {{{patient.computedNonInsuranceHolderLastName}}}
+          {{{patient.computedNonInsuranceHolderFirstName}}}</div>
+        <div>Date de naissance : {{{patient.formattedNonInsuredDateOfBirth}}}</div>
         Adresse&nbsp;: {{{patient.address}}}
       </div>
       <div style="width: 10px"></div>
