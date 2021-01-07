@@ -20,13 +20,23 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait agglomération C", "description": "Forfait agglomération en C", "tarif": 18.82},
-    {"nom": "Forfait agglomération D", "description": "Forfait agglomération en D", "tarif": 28.22},
-    {"nom": "Forfait court A", "description": "Forfait pour des trajets aller/retour de moins de 3 km", "tarif": 25}
+    {
+      "nom": "Forfait C/D <= 50km",
+      "description": "Forfait C ou D inférieur à 50 km",
+      "tarif": 10
+    },
+    {
+      "nom": "Forfait court A",
+      "description": "Forfait pour des trajets aller/retour de moins de 3 km",
+      "tarif": 25
+    }
   ],
   "debutNuit": 19,
   "finNuit": 7,
-  "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
+  "raison": [
+    "Hospitalisation / chimiothérapie / dialyse",
+    "Consultation / radiothérapie"
+  ],
   "tpmr": "oui",
   "neige": "oui",
   "jourFerie": "oui",
