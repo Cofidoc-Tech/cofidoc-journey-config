@@ -149,11 +149,7 @@
 
           <img
             src="data:image/png;base64,{{{enterprise.signature}}}"
-            style="
-              width: 100px;
-              height: auto;
-              align-self: flex-end;
-            "
+            style="width: 100px; height: auto; align-self: flex-end"
           />
         </div>
       </div>
@@ -217,7 +213,10 @@
               <div>{{{user.lastName}}} {{{user.firstName}}}</div>
               <div>{{{car.numberplate}}}</div>
             </td>
-            <td>{{{dayTimeKm}}}</td>
+            <td>
+              <div>{{{#dayTimeKm}}}jour: {{{dayTimeKm}}}{{{/dayTimeKm}}}</div>
+              <div>{{#nightTimeKm}}nuit: {{{nightTimeKm}}}{{/nightTimeKm}}</div>
+            </td>
             <td>{{{concurrentJourneys}}}</td>
             <td>{{{journeyType}}}</td>
             <td>{{{tpmr}}}</td>
