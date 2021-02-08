@@ -5,7 +5,7 @@
   "Approche en km": "non",
   "Simultane": "oui",
   "Simultane + personne": "non",
-  "Ticket": "oui",
+  "Ticket": "non",
   "ViaMichelin": "oui",
   "Distancier": "oui",
   "Depart (heure)": "oui",
@@ -20,12 +20,33 @@
   "Forfait": "oui",
   "Prise en charge": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "intra-muros", "tarif": 11},
-    {"nom": "Forfait 2", "description": "Orléans / La Source", "tarif": 13}
+    {
+      "nom": "Forfait 1",
+      "description": "forfait intra-muros de jour (Nantes, Rezé)",
+      "tarif": 18
+    },
+    {
+      "nom": "Forfait 2",
+      "description": "forfait intra-muros de nuit (Nantes, Rezé)",
+      "tarif": 24
+    },
+    {
+      "nom": "Forfait 3",
+      "description": "forfait agglomération de jour (Bouguenais, Carquefou, La Chapelle-sur-Erdre, Les Sorinières, Orvault, Saint-Herblain,\nSainte-Luce-sur-Loire, Saint-Sébastien-sur-Loire, Sautron, Vertou), de jour",
+      "tarif": 24
+    },
+    {
+      "nom": "Forfait 4",
+      "description": "forfait agglomération de nuit (Bouguenais, Carquefou, La Chapelle-sur-Erdre, Les Sorinières, Orvault, Saint-Herblain,\nSainte-Luce-sur-Loire, Saint-Sébastien-sur-Loire, Sautron, Vertou), de nuit",
+      "tarif": 30
+    }
   ],
   "debutNuit": 19,
   "finNuit": 7,
-  "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie"],
+  "raison": [
+    "Hospitalisation / chimiothérapie / dialyse",
+    "Consultation / radiothérapie"
+  ],
   "tpmr": "oui",
   "neige": "oui",
   "jourFerie": "oui",
