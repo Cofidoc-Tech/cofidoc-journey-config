@@ -1,0 +1,243 @@
+<html>
+<style>
+  html {
+    padding: 10px;
+    font-family: Arial;
+    --titleColor: rgb(65, 120, 176);
+    --table-font-size: 9px;
+    font-size: 10px;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 18px;
+    font-size: var(--table-font-size);
+  }
+  th,
+  td {
+    border: 1px solid black;
+    padding-left: 5px;
+    font-weight: normal;
+  }
+  .alignedTop {
+    vertical-align: top;
+  }
+  td:not(.alignedTop) {
+    text-align: center;
+  }
+
+  .patientAndTaxiInfo {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .title {
+    background-color: #ddd;
+  }
+
+  :not(th):not(td):not(tr).title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+  }
+
+  .big {
+    font-size: 1rem;
+  }
+
+  .footer > :last-child {
+    min-height: 100px;
+  }
+
+
+  .headerBox {
+    border: 1px solid black;
+  }
+
+  .smallText {
+    font-size: 8px;
+  }
+
+  .spacer {
+    height: 5px;
+  }
+</style>
+<body>
+
+<div class="title headerBox">TRANSPORT EN TAXI POUR MOTIF MEDICAL - ANNEXE A LA FACTURE</div>
+<div class="spacer"></div>
+
+<div class="patientAndTaxiInfo">
+  <div  style="flex: 2; border: 1px solid black">
+    <div class="title"
+    >RENSEIGNEMENTS CONCERNANT L'ASSUR&Eacute;(E)</div
+    >
+    <div style="padding: 5px">
+      <div>
+        Num&eacute;ro de s&eacute;curit&eacute; sociale :
+        {{{patient.socialSecurityNumber}}}
+      </div>
+      <div>
+        Nom patronymique&nbsp; (nom de naissance) :
+        {{{patient.computedInsuranceHolderLastName}}}
+      </div>
+      <div>Nom d'usage (facultatif)&nbsp;:</div>
+      <div>
+        Pr&eacute;noms : {{{patient.computedInsuranceHolderFirstName}}}
+      </div>
+
+      <span style="font-weight: bold"
+      >Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):
+          </span>
+
+      <div>
+        Nom patronymique : {{{patient.computedNonInsuranceHolderLastName}}}
+      </div>
+      <div>Nom d'usage (facultatif) :</div>
+      <div>
+        Pr&eacute;noms : {{{patient.computedNonInsuranceHolderFirstName}}}
+      </div>
+      <div>Date de naissance : {{{patient.formattedDateOfBirth}}}</div>
+    </div>
+  </div>
+  <div
+          style="
+          flex: 2;
+          border: 1px solid black;
+          display: flex;
+          flex-direction: column;
+        "
+  >
+    <div class="title">IDENTIFICATION DE L'ENTREPRISE (cachet)</div>
+
+    <div
+            style="
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex: 1;
+            padding: 5px;
+          "
+    >
+      <div>{{{enterprise.nameAndAddress}}}</div>
+
+      <img
+              src="data:image/png;base64,{{{enterprise.signature}}}"
+              style="width: 100px; height: auto; align-self: flex-end"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="spacer"></div>
+<div class="headerBox">
+
+
+  <table>
+    <thead>
+      <tr>
+        <th  colspan="15" class="title">
+          RENSEIGNEMENTS CONCERNANT LE(S) TRANSPORT(S)
+        </th>
+        <th colspan="3" style="text-align: left">N&deg; de facture :</th>
+      </tr>
+      <tr class="title">
+        <th colspan="3">D&eacute;part</th>
+        <th colspan="3">Arriv&eacute;e</th>
+        <th colspan="3">V&eacute;hicule et conducteur</th>
+        <th rowspan="2" style="width: 5%">Distance totale (km)</th>
+        <th rowspan="2">Attente</th>
+        <th rowspan="2">Tarifs <div>A</div><div>B</div><div>C</div><div>D</div></th>
+        <td rowspan="2" style="width: 5%">Forfait intra-muros ou agglo (&euro;)</td>
+        <td colspan="2">Suppl&eacute;ments (&euro;)</td>
+        <td colspan="2">Transports partag&eacute;s</td>
+      </tr>
+
+      <tr class="title">
+        <th>Date</th>
+        <th>Heure</th>
+        <th style="min-width: 10%">Lieu</th>
+        <th>Date</th>
+        <th>Heure</th>
+        <th style="min-width: 10%">Lieu</th>
+        <th style="width: 8%">N&deg; immatriculation</th>
+        <th style="width: 3%">N&deg; ADS</th>
+        <th>Nom conducteur</th>
+        <th>P&eacute;age</th>
+        <th>TPMR</th>
+        <th style="width: 5%">Nombre de patients transport&eacute;s</th>
+        <th style="width: 5%">Abattement (&euro;)</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#journeys}}
+    <tr>
+      <td>{{{formattedDepartureDate}}}</td>
+      <td>{{{formattedDepartureTime}}}</td>
+      <td>{{{formattedDepartureLocation}}} {{{departurePostcode}}}</td>
+      <td>{{{formattedArrivalDate}}}</td>
+      <td>{{{formattedArrivalTime}}}</td>
+      <td>{{{formattedArrivalLocation}}} {{{arrivalPostcode}}}</td>
+      <td>{{{car.numberplate}}}</td>
+      <td>
+<!--        Numéro ADS -->
+      </td>
+      <td>{{{user.lastName}}}</td>
+      <td>
+        <div>{{#dayTimeKm}}jour: {{{dayTimeKm}}}{{/dayTimeKm}}</div>
+        <div>{{#nightTimeKm}}nuit: {{{nightTimeKm}}}{{/nightTimeKm}}</div>
+      </td>
+      <td>{{{waitingTime}}}</td>
+      <td>{{{journeyType}}}</td>
+      <td>{{{pricePackage}}}</td>
+      <td>{{{toll}}}</td>
+      <td>{{{tpmr}}}</td>
+      <td>{{concurrentJourneys}}</td>
+      <td></td>
+    </tr>
+    {{/journeys}}
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="17" class="title" style="text-align:left">
+            <div>ATTESTATION DE L'ASSUR&Eacute;(E)</div>
+            <div>
+              L'assur&eacute;(e), ou la personne transport&eacute;e, ou son
+              repr&eacute;sentant l&eacute;gal, atteste de la r&eacute;alit&eacute;
+              et des conditions du (des) transports d&eacute;taill&eacute;(s)
+              &agrave; la pr&eacute;sente annexe.
+            </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="9"  style="text-align:left">
+          <span>Fait &agrave; {{{doneIn}}} </span>
+          <div>Le {{{now}}}</span>
+        </td>
+        <td colspan="8">
+          Signature assur&eacute; ou patient ou repr&eacute;sentant l&eacute;gal :
+          <span style="position: relative">
+            <span style="font-style: italic">{{impossibleToSign}}</span>
+            {{#signaturePatient}}
+            <img
+                    src="data:image/png;base64,{{{signaturePatient}}}"
+                    style="
+                width: 60px;
+                max-height: 100px;              
+              "
+            />
+            {{/signaturePatient}}
+          </span>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+
+</body>
+</html>
