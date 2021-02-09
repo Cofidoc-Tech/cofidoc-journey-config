@@ -108,7 +108,7 @@
             Num&eacute;ro de s&eacute;curit&eacute; sociale :
             <div>{{{patient.socialSecurityNumber}}}</div>
           </td>
-          <td rowspan="4" class="enterprise">
+          <td rowspan="5" class="enterprise">
             <div
               style="
                 height: 100%;
@@ -143,6 +143,9 @@
             Pr&eacute;noms :
             <div>{{{patient.computedInsuranceHolderFirstName}}}</div>
           </td>
+        </tr>
+        <tr>
+          <td>Adresse&nbsp;: {{{patient.address}}}</td>
         </tr>
       </tbody>
     </table>
