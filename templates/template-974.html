@@ -185,6 +185,7 @@
             <div class="cellHeader">Suppl&eacute;ments remboursables</div>
             <div>Routes payantes</div>
           </th>
+          <th>Distance (km)</th>
           <th>Motif</th>
         </tr>
       </thead>
@@ -204,8 +205,8 @@
           </td>
           <td>{{concurrentJourneys}}</td>
           <td>{{{tpmr}}}</td>
+          <td>{{{toll}}} {{{forfaitTarif}}}</td>
           <td>
-            {{{toll}}} {{{forfaitTarif}}}
             <div>{{#dayTimeKm}} {{{dayTimeKm}}} {{/dayTimeKm}}</div>
             <div>{{#nightTimeKm}} {{{nightTimeKm}}} {{/nightTimeKm}}</div>
           </td>
