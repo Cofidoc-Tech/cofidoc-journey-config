@@ -204,7 +204,11 @@
           </td>
           <td>{{concurrentJourneys}}</td>
           <td>{{{tpmr}}}</td>
-          <td>{{{toll}}} {{{forfaitTarif}}}</td>
+          <td>
+            {{{toll}}} {{{forfaitTarif}}}
+            <div>{{#dayTimeKm}} {{{dayTimeKm}}} {{/dayTimeKm}}</div>
+            <div>{{#nightTimeKm}} {{{nightTimeKm}}} {{/nightTimeKm}}</div>
+          </td>
           <td>{{{shortReason}}}</td>
         </tr>
         {{/journeys}}
