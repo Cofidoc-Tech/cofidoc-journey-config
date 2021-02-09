@@ -186,7 +186,7 @@
             <div>Routes payantes</div>
           </th>
           <th>Distance (km)</th>
-          <th>Motif</th>
+          <th>Motif*</th>
         </tr>
       </thead>
       <tbody>
@@ -207,15 +207,18 @@
           <td>{{{tpmr}}}</td>
           <td>{{{toll}}} {{{forfaitTarif}}}</td>
           <td>
-            <div>{{#dayTimeKm}} {{{dayTimeKm}}} {{/dayTimeKm}}</div>
-            <div>{{#nightTimeKm}} {{{nightTimeKm}}} {{/nightTimeKm}}</div>
+            <div>{{#dayTimeKm}}jour: {{{dayTimeKm}}} {{/dayTimeKm}}</div>
+            <div>{{#nightTimeKm}}nuit: {{{nightTimeKm}}} {{/nightTimeKm}}</div>
           </td>
           <td>{{{shortReason}}}</td>
         </tr>
         {{/journeys}}
       </tbody>
     </table>
-
+    <div class="row" style="width: 75%">
+      *H: Hospitalisation / chimiothérapie / dialyse, C: Consultation /
+      radiothérapie
+    </div>
     <div class="signature">
       <div class="signatureHeader">ATTESTATION DE L'ASSURE(E)</div>
       <div class="signatureDisclaimer">
