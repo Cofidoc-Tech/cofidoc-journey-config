@@ -40,17 +40,17 @@
       En application de l'article 7.2, cette annexe sign&eacute;e par le patient
       est transmise par l'entreprise de taxi conventionn&eacute;e afin
       d'attester de la r&eacute;alit&eacute; de la r&eacute;alisation du
-      transport patient. Conformément aux négociations avec les représentants
-      des syndicats, cette annexe n'est utilisée que pour les transports en
-      série en cas de panne de l'édition de note, aussi appelée "facturette".
+      transport patient. Conform&eacute;ment aux n&eacute;gociations avec les repr&eacute;sentants
+      des syndicats, cette annexe n'est utilis&eacute;e que pour les transports en
+      s&eacute;rie en cas de panne de l'&eacute;dition de note, aussi appel&eacute;e "facturette".
     </div>
-    <div>Numéro de facture :</div>
+    <div>Num&eacute;ro de facture :</div>
 
     <div style="display: flex; flex-direction: row">
       <div class="border" style="flex: 1">
         <div>RENSEIGNEMENTS CONCERNANT L'ASSUR&Eacute;(E)</div>
         <div>
-          N&deg; de sécurité sociale : {{{patient.socialSecurityNumber}}}
+          N&deg; de s&eacute;curit&eacute; sociale : {{{patient.socialSecurityNumber}}}
         </div>
         <div>
           Nom patronymique&nbsp;: {{{patient.computedInsuranceHolderLastName}}}
@@ -59,7 +59,7 @@
         <div>
           Pr&eacute;noms : {{{patient.computedInsuranceHolderFirstName}}}
         </div>
-        <strong>Si la personne n'est pas l'assuré(e)</strong>
+        <strong>Si la personne n'est pas l'assur&eacute;(e)</strong>
         <div>
           Nom patronymique&nbsp;:
           {{{patient.computedNonInsuranceHolderLastName}}}
@@ -123,8 +123,8 @@
           <th style="width: 8%">Nom du chauffeur</th>
           <th style="width: 8%">Nombre de patients transport&eacute;s</th>
           <th>
-            A cocher en cas de transport réalisé pour un patient à mobilité
-            réduite
+            A cocher en cas de transport r&eacute;alis&eacute; pour un patient &agrave; mobilit&eacute;
+            r&eacute;duite
           </th>
           <th style="width: 8%">
             <div>Suppl&eacute;ments remboursables</div>
@@ -154,8 +154,9 @@
           <td>{{concurrentJourneys}}</td>
           <td>{{{tpmr}}}</td>
           <td>
-            {{{forfaitTarif}}} {{{toll}}}
-            <div>{{#snow}}N<sup>*</sup>{{/snow}}</div>
+            {{#toll}}<div>P&eacute;age: {{{toll}}}</div>{{/toll}}
+            {{#pricePackage}}<div>Forfait: {{{pricePackage}}}</div>{{/pricePackage}}
+            {{#snow}}<div>N<sup>*</sup></div>{{/snow}}
           </td>
           <td>{{shortReason}}</td>
         </tr>
@@ -167,8 +168,8 @@
     </em>
 
     <div class="row" style="width: 75%">
-      *H: Hospitalisation / chimiothérapie / dialyse, C: Consultation /
-      radiothérapie
+      *H: Hospitalisation / chimioth&eacute;rapie / dialyse, C: Consultation /
+      radioth&eacute;rapie
     </div>
 
     <div class="border">
