@@ -29,6 +29,16 @@
       "nom": "Forfait court A",
       "description": "Forfait pour des trajets aller/retour de moins de 3 km",
       "tarif": 25
+    },
+    {
+      "nom": "Forfait agglomération C",
+      "description": "",
+      "tarif": 18.82
+    },
+    {
+      "nom": "Forfait agglomération D",
+      "description": "Forfait agglomération pour les trajets de nuit / jour férié",
+      "tarif": 28.22
     }
   ],
   "debutNuit": 19,
