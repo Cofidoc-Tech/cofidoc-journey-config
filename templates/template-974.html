@@ -105,10 +105,24 @@
       <tbody>
         <tr>
           <td>
-            Num&eacute;ro de s&eacute;curit&eacute; sociale :
-            <div>{{{patient.socialSecurityNumber}}}</div>
+            N&deg; de s&eacute;curit&eacute; sociale :
+            {{{patient.socialSecurityNumber}}}<br />
+            Nom&nbsp;: {{{patient.computedInsuranceHolderLastName}}}<br />
+            Pr&eacute;nom : {{{patient.computedInsuranceHolderFirstName}}}<br />
+            Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}<br />
+            Caisse&nbsp;: {{{patient.socialSecurityName}}}<br />
+            Mutuelle&nbsp;: {{{patient.healthInsuranceName}}}<br />
+
+            <strong>Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):</strong>
+            <div>Nom : {{{patient.computedNonInsuranceHolderLastName}}}</div>
+            <div>Pr&eacute;noms : {{{patient.computedNonInsuranceHolderFirstName}}}</div>
+            <div>Date de naissance : {{{patient.formattedNonInsuredDateOfBirth}}}</div>
+            <br/>
+            Adresse&nbsp;: {{{patient.address}}}
+
+
           </td>
-          <td rowspan="5" class="enterprise">
+          <td class="enterprise">
             <div
               style="
                 height: 100%;
@@ -129,37 +143,8 @@
             </div>
           </td>
         </tr>
-        <tr>
-          <td>
-            Nom patronymique (nom de naissance) :
-            <div>{{{patient.computedInsuranceHolderLastName}}}</div>
-          </td>
-        </tr>
-        <tr>
-          <td>Nom d'usage (facultatif) :</td>
-        </tr>
-        <tr>
-          <td>
-            Pr&eacute;noms :
-            <div>{{{patient.computedInsuranceHolderFirstName}}}</div>
-          </td>
-        </tr>
-        <tr>
-          <td>Adresse&nbsp;: {{{patient.address}}}</td>
-        </tr>
       </tbody>
     </table>
-
-    <div class="notTheInsuredPerson">
-      <div>Si la personne transport&eacute;e n'est pas l'assur&eacute;(e)</div>
-      <div>
-        Nom patronymique : {{{patient.computedNonInsuranceHolderLastName}}}
-      </div>
-      <div>Nom d'usage (facultatif) :</div>
-      <div>
-        Pr&eacute;noms : {{{patient.computedNonInsuranceHolderFirstName}}}
-      </div>
-    </div>
 
     <table>
       <thead>
@@ -184,6 +169,7 @@
             A cocher en cas de transport r&eacute;alis&eacute; pour un patient
             &agrave; mobilit&eacute; r&eacute;duite
           </th>
+          <th class="cellHeader">Type</th>
           <th style="width: 15%">
             <div class="cellHeader">Suppl&eacute;ments remboursables</div>
             <div>Routes payantes</div>
@@ -208,6 +194,7 @@
           </td>
           <td>{{concurrentJourneys}}</td>
           <td>{{{tpmr}}}</td>
+          <td>{{{journeyType}}}</td>
           <td>{{{toll}}} {{{forfaitTarif}}}</td>
           <td>
             <div>{{#dayTimeKm}}jour: {{{dayTimeKm}}} {{/dayTimeKm}}</div>
