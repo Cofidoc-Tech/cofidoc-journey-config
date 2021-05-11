@@ -1,0 +1,250 @@
+<html>
+<style>
+  html {
+    padding: 10px;
+    font-family: Arial;
+    --table-font-size: 10px;
+    font-size: 11px;
+  }
+  body > :not(:last-child) {
+    margin-bottom: 10px;
+  }
+  table {
+    font-size: var(--table-font-size);
+  }
+  th,
+  td {
+    border: 1px solid black;
+    margin: 0 2px;
+  }
+  td:not(.alignedTop) {
+    text-align: center;
+  }
+  .underlined {
+    text-decoration: underline;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .border {
+    border: 1px solid black;
+    padding: 5px;
+  }
+</style>
+<body>
+<div class="row">
+  <div style="display: flex; flex-direction: column;">
+    <div style="font-weight: bold;">Annexe 4</div>
+    <span style="background-color: black; color: white; padding: 5px;"
+    >ANNEXE &agrave; la facture</span
+    >
+  </div>
+  <div
+          class="row"
+          style="padding: 5px; border: 1px solid black; font-weight: bold;"
+  >
+    TRANSPORT EN TAXI POUR MOTIF M&Eacute;DICAL
+  </div>
+  <div>ASSURANCE MALADIE</div>
+</div>
+<div>
+  <div style="display: flex; flex-direction: row;">
+    <div
+            style="
+            flex: 1;
+            padding-left: 5px;
+            text-transform: uppercase;
+            font-style: italic;
+          "
+    >
+      Renseignements concernant l'assur&eacute;(e)(1)
+    </div>
+    <div style="flex: 1; padding-left: 5px; font-style: italic;">
+      D&Eacute;NOMINATION DE L'ENTREPRISE
+    </div>
+  </div>
+  <div style="display: flex; flex-direction: row;">
+    <div class="border" style="flex: 1;">
+      <div>
+        N&deg; d'immatriculation : {{{patient.socialSecurityNumber}}}
+      </div>
+      <div>Nom&nbsp;: {{{patient.computedInsuranceHolderLastName}}}</div>
+      <div>Nom d'usage&nbsp;:</div>
+      <div>
+        Pr&eacute;noms : {{{patient.computedInsuranceHolderFirstName}}}
+      </div>
+      <div>Nom et pr&eacute;nom ayant-droit :</div>
+      <div>
+        {{{patient.computedNonInsuranceHolderLastName}}}
+        {{{patient.computedNonInsuranceHolderFirstName}}}
+      </div>
+      <div>Caisse&nbsp;: {{{patient.socialSecurityName}}}</div>
+      <div>Mutuelle&nbsp;: {{{patient.healthInsuranceName}}}</div>
+      <div>Adresse&nbsp;: {{{patient.address}}}</div>
+    </div>
+
+    <div
+            class="border"
+            style="flex: 1; display: flex; flex-direction: column;"
+    >
+      <div>{{{enterprise.nameAndAddress}}}</div>
+    </div>
+  </div>
+</div>
+
+<table
+        style="
+        border-collapse: collapse;
+        width: 100%;
+        height: 18px;
+        margin-bottom: 0;
+      "
+        border="1"
+>
+  <thead>
+  <tr>
+    <th style="width: 22%;">
+      <div>
+        <span class="underlined">D&eacute;part:</span>
+        <span>date - heure</span>
+      </div>
+
+      <div>Lieu de prise en charge</div>
+    </th>
+    <th style="width: 22%;">
+      <div>
+        <span class="underlined">Arriv&eacute;e:</span>
+        <span>date - heure</span>
+      </div>
+
+      <div>Lieu de prise en charge</div>
+    </th>
+    <th style="width: 8%;">Nbre de patients transport&eacute;s</th>
+    <th style="width: 22%;">
+      <div>Nom du conducteur</div>
+      <div>Immatriculation</div>
+      <div>N&deg; autorisation stationnement</div>
+    </th>
+    <th style="width: 8%;">Distance totale (km)</th>
+    <th>Temps d'attente</th>
+    <th>Tarif</th>
+    <th style="width: 8%;">
+      Suppl&eacute;ments
+      <div>(euros) (2)</div>
+    </th>
+    <th>Montant de la course</th>
+    <th>Motif</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#journeys}}
+  <tr>
+    <td>
+      {{{formattedDepartureDate}}} - {{formattedDepartureTime}}
+      <div>{{{formattedDepartureLocation}}}</div>
+    </td>
+    <td>
+      {{{formattedArrivalDate}}} - {{formattedArrivalTime}}
+      <div>{{{formattedArrivalLocation}}}</div>
+    </td>
+    <td>{{concurrentJourneys}}</td>
+    <td>
+      <div>{{{user.lastName}}} {{{user.firstName}}}</div>
+      <div>{{{car.numberplate}}}</div>
+    </td>
+    <td>
+      <div>{{#dayTimeKm}} jour: {{{dayTimeKm}}} {{/dayTimeKm}}</div>
+      <div>{{#nightTimeKm}} nuit: {{{nightTimeKm}}} {{/nightTimeKm}}</div>
+    </td>
+    <td>
+      {{#waitingTime}}{{{waitingTime}}}{{/waitingTime}}
+    </td>
+    <td>{{{forfaitTarif}}}</td>
+    <td>
+      <div>{{#toll}}P: {{{toll}}}{{/toll}}</div>
+      <div></div>
+      <div>{{#snow}}N<sup>*</sup>{{/snow}}</div>
+    </td>
+    <td></td>
+    <td>{{shortReason}}</td>
+  </tr>
+  {{/journeys}}
+  </tbody>
+</table>
+<em style="font-size: 0.75rem;">
+  {{#needSnowIceLegend}}N: Neige / Verglas{{/needSnowIceLegend}}
+</em>
+
+<div style="display: flex; flex-direction: row;">
+  <div style="flex: 2;"></div>
+  {{#signaturePatient}}
+  <div class="row" style="flex: 1; align-items: flex-start;">
+    <span>Signature de l'assur&eacute; (3)</span>
+
+    <div style="position: relative;">
+      <img
+              src="data:image/png;base64,{{{signaturePatient}}}"
+              style="
+              width: 80px;
+              height: auto;
+              position: absolute;
+              left: -100px;
+              top: 0px;
+            "
+      />
+    </div>
+  </div>
+  {{/signaturePatient}} {{#impossibleToSign}}
+  <div style="flex: 1;">
+    <span>Ne peut pas signer</span>
+    <span style="font-size: 2rem;">&blacksquare;</span>
+    <div>(Enfants - assur&eacute;s en incapacit&eacute; de signer)</div>
+  </div>
+  {{/impossibleToSign}}
+</div>
+
+<div class="row">
+  <fieldset>
+    <legend>Attestation de l'assur&eacute;(e)</legend>
+    <div style="font-weight: bold;">SUBROGATION</div>
+    <div>
+      L'assur&eacute;(e), ou la personne transport&eacute;e ou son
+      repr&eacute;sentant atteste de la r&eacute;alit&eacute; et des
+      conditions du (des) transports d&eacute;taill&eacute;(s) ci-dessus.
+    </div>
+  </fieldset>
+
+  <div style="flex: 1; padding-left: 10px;">
+    <div>Fait &agrave; {{{doneIn}}}</div>
+    <div>Le {{{now}}}</div>
+  </div>
+</div>
+
+<div class="row">
+  <div style="flex: 1; font-style: italic; font-size: 0.75rem;">
+    <div>
+      (1) se reporter &agrave; la carte Vitale ou l'attestation de droits
+    </div>
+    <div>(2) P: P&eacute;age - N: Neige</div>
+    <div>
+      (3) Attestation : l'assur&eacute; ou la personne transport&eacute;e,
+      ou son repr&eacute;sentant, atteste de la r&eacute;alit&eacute; et des
+      conditions du transport
+    </div>
+  </div>
+
+  <div>
+    Signature de l'entreprise
+    <div>
+      <img
+              src="data:image/png;base64,{{{enterprise.signature}}}"
+              style="width: 100px; height: auto; align-self: flex-end;"
+      />
+    </div>
+  </div>
+</div>
+</body>
+</html>
