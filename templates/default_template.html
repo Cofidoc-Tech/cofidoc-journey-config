@@ -26,11 +26,11 @@
   </style>
   <body>
     <h4 style="text-align: center">
-          <span style="text-decoration: underline"
-          ><strong
+      <span style="text-decoration: underline"
+        ><strong
           >ANNEXE 4 - ANNEXE A LA FACTURE VALANT ATTESTATION DE SERVICE FAIT
-            </strong>
-          </span>
+        </strong>
+      </span>
     </h4>
     <p>
       Cette annexe sign&eacute;e par le patient est transmise par l'entreprise
@@ -48,10 +48,16 @@
         Caisse&nbsp;: {{{patient.socialSecurityName}}}<br />
         Mutuelle&nbsp;: {{{patient.healthInsuranceName}}}<br />
         Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}<br />
-        <div>Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):</div>
-        <div>Nom : {{{patient.computedNonInsuranceHolderLastName}}}
-          {{{patient.computedNonInsuranceHolderFirstName}}}</div>
-        <div>Date de naissance : {{{patient.formattedNonInsuredDateOfBirth}}}</div>
+        <div>
+          Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):
+        </div>
+        <div>
+          Nom : {{{patient.computedNonInsuranceHolderLastName}}}
+          {{{patient.computedNonInsuranceHolderFirstName}}}
+        </div>
+        <div>
+          Date de naissance : {{{patient.formattedNonInsuredDateOfBirth}}}
+        </div>
         Adresse&nbsp;: {{{patient.address}}}
       </div>
       <div style="width: 10px"></div>
@@ -111,7 +117,7 @@
           <th style="width: 6%">TPMR</th>
           <th style="width: 8%">Nb patients</th>
           <th style="width: 8%">P&eacute;age</th>
-          <th>Motif</th>
+          <th>Motif*</th>
         </tr>
       </thead>
       <tbody>
@@ -131,9 +137,7 @@
           <td>{{waitingTime}}</td>
           <td>
             <div>{{forfaitTarif}}</div>
-            <div>
-              {{#snow}}N<sup>*</sup>{{/snow}}
-            </div>
+            <div>{{#snow}}N<sup>*</sup>{{/snow}}</div>
           </td>
           <td>{{{tpmr}}}</td>
           <td>{{concurrentJourneys}}</td>
@@ -146,6 +150,10 @@
     <em style="font-size: 0.75rem">
       {{#needSnowIceLegend}}N: Neige / Verglas{{/needSnowIceLegend}}
     </em>
+    <div class="row" style="width: 75%">
+      *H: Hospitalisation / chimioth&eacute;rapie / dialyse, C: Consultation /
+      radioth&eacute;rapie, *I: IRM / scanner
+    </div>
     <p>
       <strong>SUBROGATION</strong> : L'assur&eacute;(e) autorise le versement
       direct au transporteur du montant remboursable du(des) transport(s)

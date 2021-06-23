@@ -30,13 +30,13 @@
       font-weight: bold;
     }
     .negative-margin {
-      margin : -5px -5px 0 -5px;
+      margin: -5px -5px 0 -5px;
     }
-    :not(th)>.title {
+    :not(th) > .title {
       display: flex;
       justify-content: center;
     }
-    th>.title {
+    th > .title {
       margin: -1px;
     }
 
@@ -50,29 +50,35 @@
     <div class="row">
       <div style="flex: 1">CONVENTION TAXI</div>
       <h4 style="text-align: center">
-        <div style="font-size: 3rem;">Annexe</div>
+        <div style="font-size: 3rem">Annexe</div>
         <div>&agrave; la facture transport(s) par taxi</div>
         <div>Articles L 321-1-2 et L 322-5 du code de la Sécurité sociale</div>
       </h4>
-      <div style="flex: 1; min-width: 15rem">NUMERO DE FACTURE: <span></span></div>
+      <div style="flex: 1; min-width: 15rem">
+        NUMERO DE FACTURE: <span></span>
+      </div>
     </div>
     <div class="row">
       <div style="flex: 3; border: 1px solid black; padding: 5px">
-        <div class="title negative-margin">Renseignements concernant l'assur&eacute; (1)</div>
-        <div>Num&eacute;ro de s&eacute;curit&eacute; sociale :
-        {{{patient.socialSecurityNumber}}}</div>
+        <div class="title negative-margin">
+          Renseignements concernant l'assur&eacute; (1)
+        </div>
         <div>
-        Nom&nbsp; patronymique: {{{patient.computedInsuranceHolderLastName}}}</div>
+          Num&eacute;ro de s&eacute;curit&eacute; sociale :
+          {{{patient.socialSecurityNumber}}}
+        </div>
         <div>
-        Nom&nbsp; d'usage: {{{patient.computedInsuranceHolderLastName}}}</div>
+          Nom&nbsp; patronymique: {{{patient.computedInsuranceHolderLastName}}}
+        </div>
         <div>
-        Pr&eacute;nom : {{{patient.computedInsuranceHolderFirstName}}}</div>
+          Nom&nbsp; d'usage: {{{patient.computedInsuranceHolderLastName}}}
+        </div>
         <div>
-        Caisse&nbsp;: {{{patient.socialSecurityName}}}</div>
-        <div>
-        Mutuelle&nbsp;: {{{patient.healthInsuranceName}}}</div>
-        <div>
-        Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}</div>
+          Pr&eacute;nom : {{{patient.computedInsuranceHolderFirstName}}}
+        </div>
+        <div>Caisse&nbsp;: {{{patient.socialSecurityName}}}</div>
+        <div>Mutuelle&nbsp;: {{{patient.healthInsuranceName}}}</div>
+        <div>Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}</div>
         <div>
           Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):
         </div>
@@ -95,13 +101,15 @@
           flex-direction: column;
         "
       >
-        <div class="title negative-margin">D&eacute;nomination de l'entreprise</div>
+        <div class="title negative-margin">
+          D&eacute;nomination de l'entreprise
+        </div>
         <div>{{{enterprise.nameAndAddress}}}</div>
       </div>
     </div>
 
     <table
-    style="
+      style="
         border-collapse: collapse;
         width: 100%;
         height: 18px;
@@ -110,7 +118,11 @@
       border="1"
     >
       <thead>
-        <tr><th colspan=20><div class="title">Renseignements concernant les transports</div></th></tr>
+        <tr>
+          <th colspan="20">
+            <div class="title">Renseignements concernant les transports</div>
+          </th>
+        </tr>
         <tr>
           <th></th>
           <th style="width: 20%">
@@ -129,7 +141,7 @@
           <th style="width: 8%">Distance totale (km)</th>
           <th style="width: 8%">Suppl&eacute;ments (&euro;)</th>
 
-          <th>Motif</th>
+          <th>Motif*</th>
         </tr>
       </thead>
       <tbody>
@@ -161,73 +173,81 @@
         {{/journeys}}
       </tbody>
     </table>
+    <div class="row" style="width: 75%">
+      *H: Hospitalisation / chimioth&eacute;rapie / dialyse, C: Consultation /
+      radioth&eacute;rapie, *I: IRM / scanner
+    </div>
 
     <div style="height: 2px"></div>
     <div style="flex: 3; border: 1px solid black; padding: 5px">
-    <div class="title negative-margin">Attestation de l'assuré</div>
-    <div>
-      <input type="checkbox" checked><strong>SUBROGATION</strong> : L'assur&eacute;(e) autorise le versement
-      direct au transporteur du montant remboursable du (des) transport(s)
-      ci-dessus. Il s&rsquo;engage, s&rsquo;il y a lieu, &agrave; payer au
-      transporteur tout ou partie de la facture en cas de refus total ou partiel
-      de prise en charge par l&rsquo;organisme d&rsquo;assurance maladie.
+      <div class="title negative-margin">Attestation de l'assuré</div>
+      <div>
+        <input type="checkbox" checked /><strong>SUBROGATION</strong> :
+        L'assur&eacute;(e) autorise le versement direct au transporteur du
+        montant remboursable du (des) transport(s) ci-dessus. Il s&rsquo;engage,
+        s&rsquo;il y a lieu, &agrave; payer au transporteur tout ou partie de la
+        facture en cas de refus total ou partiel de prise en charge par
+        l&rsquo;organisme d&rsquo;assurance maladie.
+      </div>
+      <div>
+        <input type="checkbox" checked /><strong>ATTESTATION</strong> :
+        L'assur&eacute;(e), ou la personne transport&eacute;e, ou son
+        repr&eacute;sentant l&eacute;gal, atteste de la r&eacute;alit&eacute; et
+        des conditions du (des) transports d&eacute;taill&eacute;(s) ci-dessus.
+      </div>
+      <div class="row">
+        <div>
+          <div>Fait &agrave; {{{doneIn}}}</div>
+          <div>Le {{{now}}}</div>
+        </div>
+        <span> Signature</span>
+        <span style="position: relative; min-height: 50px">
+          <span style="font-style: italic">{{impossibleToSign}}</span>
+          {{#signaturePatient}}
+          <img
+            src="data:image/png;base64,{{{signaturePatient}}}"
+            style="
+              width: 80px;
+              height: auto;
+              position: absolute;
+              top: -20px;
+              left: -100px;
+            "
+          />
+          {{/signaturePatient}}
+        </span>
+      </div>
     </div>
-    <div>
-      <input type="checkbox" checked><strong>ATTESTATION</strong> : L'assur&eacute;(e), ou la personne
-      transport&eacute;e, ou son repr&eacute;sentant l&eacute;gal, atteste de la
-      r&eacute;alit&eacute; et des conditions du (des) transports
-      d&eacute;taill&eacute;(s) ci-dessus.
-    </div>
-    <div class="row">
-    <div>
-      <div>Fait &agrave; {{{doneIn}}}</div>
-      <div>Le {{{now}}}</div>
-    </div>
-      <span> Signature</span>
-      <span style="position: relative; min-height: 50px">
-        <span style="font-style: italic">{{impossibleToSign}}</span>
-        {{#signaturePatient}}
-        <img
-          src="data:image/png;base64,{{{signaturePatient}}}"
-          style="
-            width: 80px;
-            height: auto;
-            position: absolute;
-            top: -20px;
-            left: -100px;
-          "
-        />
-        {{/signaturePatient}}
-      </span>
-    </div>
-  </div>
     <div>
       <em style="font-size: 0.75rem">
-        Important: La loi 78.17 du E.1.78 relative à l'informatique, aux fichiers 
-        et aux libertés s'applique aux réponses faites sur ce formulaire.
-        Elle garantit un droit d'accès et de rectification pour les données vous concernant.
-        La loi rend passible d&rsquo;amende et/ou d&rsquo;emprisonnement
-        quiconque se rend coupable de fraudes ou de fausses d&eacute;clarations
-        (art. L377-1 du code de la S&eacute;curit&eacute; sociale, 1047 du Code
-        Rural, 441.1 du Code P&eacute;nal)
+        Important: La loi 78.17 du E.1.78 relative à l'informatique, aux
+        fichiers et aux libertés s'applique aux réponses faites sur ce
+        formulaire. Elle garantit un droit d'accès et de rectification pour les
+        données vous concernant. La loi rend passible d&rsquo;amende et/ou
+        d&rsquo;emprisonnement quiconque se rend coupable de fraudes ou de
+        fausses d&eacute;clarations (art. L377-1 du code de la
+        S&eacute;curit&eacute; sociale, 1047 du Code Rural, 441.1 du Code
+        P&eacute;nal)
         <div>Réf. 21.514</div>
       </em>
     </div>
     <div class="row">
       <div>
-        <div>CPAM des Landes / Service RPS</div>  
-        <div>Convention Taxis version définitive entérinée en commission de concertation Taxis du 19/02/2019</div>
+        <div>CPAM des Landes / Service RPS</div>
+        <div>
+          Convention Taxis version définitive entérinée en commission de
+          concertation Taxis du 19/02/2019
+        </div>
       </div>
-    <div style="display: flex; flex-direction: row;">
-      <strong>Paraphe</strong>
-      <div
-      style="display: flex; flex-direction: row; align-items: flex-end"
-    >
-      <img
-        src="data:image/png;base64,{{{enterprise.signature}}}"
-        style="width: 100px; height: auto; align-self: flex-end"
-      />
+      <div style="display: flex; flex-direction: row">
+        <strong>Paraphe</strong>
+        <div style="display: flex; flex-direction: row; align-items: flex-end">
+          <img
+            src="data:image/png;base64,{{{enterprise.signature}}}"
+            style="width: 100px; height: auto; align-self: flex-end"
+          />
+        </div>
+      </div>
     </div>
-    </div></div>
   </body>
 </html>
