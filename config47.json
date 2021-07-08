@@ -6,9 +6,9 @@
   "Approche en km": "non",
   "Simultane": "oui",
   "Simultane + personne": "non",
-  "Ticket": "oui",
-  "ViaMichelin": "non",
-  "Distancier": "oui",
+  "Ticket": "non",
+  "ViaMichelin": "oui",
+  "Distancier": "non",
   "Depart (heure)": "oui",
   "Arrivee (heure)": "oui",
   "Depart (Lieu)": "oui",
@@ -18,8 +18,7 @@
   "Type (CD)": "oui",
   "Vehicule": "oui",
   "Prise en charge (lecture seule)": "oui",
-  "Forfait": "oui",
-  "forfaits disponibles": [],
+  "Forfait": "non",
   "debutNuit": 19,
   "finNuit": 7,
   "raison": [
@@ -31,5 +30,5 @@
   "neige": "oui",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20210623-1/templates/default_template.html"
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20210623-1/templates/template-22.html"
 }
