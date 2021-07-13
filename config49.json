@@ -1,0 +1,57 @@
+{
+  "km": "oui",
+  "compteur": "non",
+  "Prise en charge": "oui",
+  "Approche en forfait": "non",
+  "Approche en km": "non",
+  "Simultane": "oui",
+  "Simultane + personne": "non",
+  "Ticket": "non",
+  "ViaMichelin": "non",
+  "Distancier": "oui",
+  "Depart (heure)": "oui",
+  "Arrivee (heure)": "oui",
+  "Depart (Lieu)": "oui",
+  "Arrivee (Lieu)": "oui",
+  "Peage": "oui",
+  "Type (AB)": "oui",
+  "Type (CD)": "oui",
+  "Vehicule": "oui",
+  "Prise en charge (lecture seule)": "oui",
+  "Forfait": "oui",
+  "forfaits disponibles": [
+    {
+      "nom": "Forfait jour intra-muros",
+      "description": "course de jour pour Angers intra-muros, Cholet intra-muros, Saumur intra-muros et entre Angers et le Village santé à Trélazé",
+      "tarif": 17.5
+    },
+    {
+      "nom": "Forfait nuit intra-muros",
+      "description": "course de jour pour Angers intra-muros, Cholet intra-muros, Saumur intra-muros et entre Angers et le Village santé à Trélazé",
+      "tarif": 26.25
+    },
+    {
+      "nom": "Forfait jour intra-communal",
+      "description": "courses de jour intra communales, hors Angers intra-muros, hors Cholet intra-muros, hors Saumur intra-muros et hors entre Angers et le «Village santé» à Trélazé",
+      "tarif": 12
+    },
+    {
+      "nom": "Forfait nuit intra-communal",
+      "description": "courses de nuit intra communales, hors Angers intra-muros, hors Cholet intra-muros, hors Saumur intra-muros et hors entre Angers et le «Village santé» à Trélazé",
+      "tarif": 18
+    }
+  ],
+  "debutNuit": 19,
+  "finNuit": 7,
+  "raison": [
+    "Hospitalisation / chimiothérapie / dialyse",
+    "Consultation / radiothérapie",
+    "IRM / scanner"
+  ],
+  "tpmr": "oui",
+  "neige": "oui",
+  "jourFerie": "oui",
+  "mapsRegionSuggestions": "fr",
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20210713-1/templates/template-49.html",
+  "landscapeFormat": "oui"
+}
