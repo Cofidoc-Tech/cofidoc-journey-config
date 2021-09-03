@@ -6,20 +6,25 @@
       --table-font-size: 10px;
       font-size: 11px;
     }
+
     body > :not(:last-child) {
       margin-bottom: 10px;
     }
+
     table {
       font-size: var(--table-font-size);
     }
+
     th,
     td {
       border: 1px solid black;
       margin: 0 2px;
     }
+
     .alignedTop {
       vertical-align: top;
     }
+
     td:not(.alignedTop) {
       text-align: center;
     }
@@ -81,7 +86,6 @@
         >
           <div>
             <div>{{{enterprise.nameAndAddress}}}</div>
-            <div>V&eacute;hicule: {{{car}}}</div>
             <div style="margin-top: 10px">Signature taxi</div>
           </div>
           <div
@@ -107,11 +111,10 @@
     >
       <thead>
         <tr>
-          <th style="width: 10%">Date</th>
-          <th style="width: 20%">D&eacute;part (heure et lieu)</th>
-          <th style="width: 20%">Arriv&eacute;e (heure et lieu)</th>
-          <th style="width: 8%">Km jour</th>
-          <th style="width: 8%">Km nuit</th>
+          <th style="width: 20%">D&eacute;part <br />(date, heure et lieu)</th>
+          <th style="width: 20%">Arriv&eacute;e <br />(date, heure et lieu)</th>
+          <th style="width: 10%">Immatriculation</th>
+          <th style="width: 8%">Km</th>
           <th style="width: 8%">Attente</th>
           <th style="width: 8%">Forfait / Tarif</th>
           <th style="width: 6%">TPMR</th>
@@ -123,21 +126,23 @@
       <tbody>
         {{#journeys}}
         <tr>
-          <td>{{{formattedDepartureDate}}}</td>
           <td class="alignedTop">
-            <div>{{formattedDepartureTime}}</div>
+            <div>{{{formattedDepartureDate}}} - {{formattedDepartureTime}}</div>
             <div>{{{formattedDepartureLocation}}}</div>
           </td>
           <td class="alignedTop">
-            <div>{{formattedArrivalTime}}</div>
+            <div>{{{formattedDepartureDate}}} - {{formattedArrivalTime}}</div>
             <div>{{{formattedArrivalLocation}}}</div>
           </td>
-          <td>{{dayTimeKm}}</td>
-          <td>{{nightTimeKm}}</td>
+          <td>{{{car.numberplate}}}</td>
+          <td>
+            <div>{{#dayTimeKm}} jour: {{{dayTimeKm}}} {{/dayTimeKm}}</div>
+            <div>{{#nightTimeKm}} nuit: {{{nightTimeKm}}} {{/nightTimeKm}}</div>
+          </td>
           <td>{{waitingTime}}</td>
           <td>
             <div>{{forfaitTarif}}</div>
-            <div>{{#snow}}N<sup>*</sup>{{/snow}}</div>
+            <div>{{#snow}}N<sup>**</sup>{{/snow}}</div>
           </td>
           <td>{{{tpmr}}}</td>
           <td>{{concurrentJourneys}}</td>
@@ -148,12 +153,14 @@
       </tbody>
     </table>
     <em style="font-size: 0.75rem">
-      {{#needSnowIceLegend}}N: Neige / Verglas{{/needSnowIceLegend}}
+      <div>
+        *H: Hospitalisation / chimioth&eacute;rapie / dialyse, C: Consultation /
+        radioth&eacute;rapie, I: IRM / scanner
+      </div>
+      {{#needSnowIceLegend}}
+      <div>**N: Neige / Verglas</div>
+      {{/needSnowIceLegend}}
     </em>
-    <div class="row" style="width: 75%">
-      *H: Hospitalisation / chimioth&eacute;rapie / dialyse, C: Consultation /
-      radioth&eacute;rapie, *I: IRM / scanner
-    </div>
     <p>
       <strong>SUBROGATION</strong> : L'assur&eacute;(e) autorise le versement
       direct au transporteur du montant remboursable du(des) transport(s)
