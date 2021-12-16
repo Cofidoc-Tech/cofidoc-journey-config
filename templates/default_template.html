@@ -3,16 +3,11 @@
     html {
       padding: 10px;
       font-family: Arial;
-      --table-font-size: 10px;
-      font-size: 11px;
+      font-size: {{fontSize}};
     }
 
     body > :not(:last-child) {
       margin-bottom: 10px;
-    }
-
-    table {
-      font-size: var(--table-font-size);
     }
 
     th,
@@ -134,7 +129,10 @@
             <div>{{{formattedDepartureDate}}} - {{formattedArrivalTime}}</div>
             <div>{{{formattedArrivalLocation}}}</div>
           </td>
-          <td>{{{car.numberplate}}}</td>
+          <td>
+            <div>{{{user.lastName}}} {{{user.firstName}}}</div>
+            <div>{{{car.numberplate}}}</div>
+          </td>
           <td>
             <div>{{#dayTimeKm}} jour: {{{dayTimeKm}}} {{/dayTimeKm}}</div>
             <div>{{#nightTimeKm}} nuit: {{{nightTimeKm}}} {{/nightTimeKm}}</div>
