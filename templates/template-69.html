@@ -3,8 +3,8 @@
     html {
       padding: 10px;
       font-family: Arial;
-      --table-font-size: 9px;
-      font-size: 11px;
+      --table-font-size: {{fontSize}};
+      font-size: {{fontSize}};
     }
     body > :not(:last-child) {
       margin-bottom: 10px;
@@ -107,7 +107,10 @@
       <tbody>
         {{#journeys}}
         <tr>
-          <td>{{{car.numberplate}}}</td>
+          <td>
+            <div>{{{user.lastName}}} {{{user.firstName}}}</div>
+            <div>{{{car.numberplate}}}</div>
+          </td>
           <td>{{{formattedDepartureDate}}}</td>
           <td class="alignedTop">
             <div>{{{formattedDepartureTime}}}</div>

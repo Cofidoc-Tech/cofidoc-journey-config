@@ -3,8 +3,8 @@
   html {
     padding: 10px;
     font-family: Arial;
-    --table-font-size: 10px;
-    font-size: 11px;
+    --table-font-size: {{fontSize}};
+    font-size: {{fontSize}};
   }
 
   table {
@@ -145,7 +145,10 @@
       {{{formattedArrivalDate}}} - {{formattedArrivalTime}}
       <div>{{{formattedArrivalLocation}}}</div>
     </td>
-    <td>{{{car.numberplate}}}</td>
+    <td>
+      <div>{{{user.lastName}}} {{{user.firstName}}}</div>
+      <div>{{{car.numberplate}}}</div>
+    </td>
     <td>
       <div>{{#dayTimeKm}} jour: {{{dayTimeKm}}} {{/dayTimeKm}}</div>
       <div>{{#nightTimeKm}} nuit: {{{nightTimeKm}}} {{/nightTimeKm}}</div>

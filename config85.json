@@ -35,6 +35,6 @@
   "neige": "oui",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/20210623-1/templates/template-85.html",
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.21/templates/template-85.html",
   "landscapeFormat": "oui"
 }
