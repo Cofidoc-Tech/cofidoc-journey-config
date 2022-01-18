@@ -20,7 +20,7 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "Forfait intramuros minimum Nimes, Ales", "tarif": 15},
+    {"nom": "Forfait 1", "description": "Forfait intramuros minimum Nimes, Ales", "tarif": 15}
   ],
   "debutNuit": 19,
   "finNuit": 8,
