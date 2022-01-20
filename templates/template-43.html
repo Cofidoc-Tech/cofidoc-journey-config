@@ -112,13 +112,14 @@
     >
       <thead>
         <tr>
-          <th style="width: 20%">D&eacute;part</th>
-          <th style="width: 20%">Arriv&eacute;e</th>
-          <th rowspan="2" style="width: 8%">
+          <th style="width: 18%">D&eacute;part</th>
+          <th style="width: 18%">Arriv&eacute;e</th>
+          <th rowspan="2" style="width: 7%">
             Nombre de patients transport&eacute;s
           </th>
-          <th rowspan="2" style="width: 8%">Co&ucirc;t compteur</th>
-          <th colspan="2" style="width: 20%">Identification taxi</th>
+          <th rowspan="2" style="width: 8%">Co&ucirc;t <br/> compteur</th>
+          <th rowspan="2" style="width: 8%">Km</th>
+          <th colspan="2" style="width: 15%">Identification taxi</th>
           <th rowspan="2" style="width: 5%">TPMR</th>
           <th rowspan="2" style="width: 5%">Tarif</th>
           <th rowspan="2" style="width: 10%">
@@ -149,6 +150,10 @@
           </td>
           <td>{{{concurrentJourneys}}}</td>
           <td>{{{counterPrice}}}</td>
+          <td>
+            <div>{{#dayTimeKm}} jour: {{{dayTimeKm}}} {{/dayTimeKm}}</div>
+            <div>{{#nightTimeKm}} nuit: {{{nightTimeKm}}} {{/nightTimeKm}}</div>
+          </td>
           <td>{{{user.lastName}}} {{{user.firstName}}}</td>
           <td>{{{car.numberplate}}}</td>
           <td>{{{tpmr}}}</td>
