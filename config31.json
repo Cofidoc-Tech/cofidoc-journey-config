@@ -1,9 +1,9 @@
 {
   "km": "oui",
-  "compteur": "oui",
+  "compteur": "non",
   "Prise en charge": "oui",
-  "Approche en forfait": "non",
-  "Approche en km": "non",
+  "Approche en forfait": "oui",
+  "Approche en km": "oui",
   "Simultane": "oui",
   "Simultane + personne": "non",
   "Ticket": "non",
