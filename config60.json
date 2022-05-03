@@ -19,9 +19,7 @@
   "Vehicule": "oui",
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
-  "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "forfait prix de course inferieur à 17€", "tarif": 17}
-  ],
+  "forfaits disponibles": [{ "nom": "Forfait 1", "description": "forfait prix de course inferieur à 17€", "tarif": 17 }],
   "debutNuit": 19,
   "finNuit": 7,
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie", "IRM / scanner"],
