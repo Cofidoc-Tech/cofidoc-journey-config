@@ -20,8 +20,7 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "forfait jour de 0 à 9 km", "tarif": 18},
-    {"nom": "Forfait 2", "description": "forfait nuit à 25€", "tarif": 25}
+    {"nom": "Forfait 1", "description": "forfait prix de course inferieur à 17€", "tarif": 17}
   ],
   "debutNuit": 19,
   "finNuit": 7,
