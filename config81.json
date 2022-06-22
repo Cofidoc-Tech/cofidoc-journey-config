@@ -20,10 +20,10 @@
   "Forfait": "oui",
   "Prise en charge": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait jour", "description": "Forfait jour", "tarif": 13},
-    {"nom": "Forfait nuit", "description": "Forfait nuit", "tarif": 16},
-    {"nom": "Forfait jour Albi ou Castres", "description": "Forfait jour de ou vers Albi ou Castres", "tarif": 16},
-    {"nom": "Forfait nuit Albi ou Castres", "description": "Forfait nuit de ou vers Albi ou Castres", "tarif": 20}
+    { "nom": "Forfait jour", "description": "Forfait jour", "tarif": 13 },
+    { "nom": "Forfait nuit", "description": "Forfait nuit", "tarif": 16 },
+    { "nom": "Forfait jour Albi ou Castres", "description": "Forfait jour de ou vers Albi ou Castres", "tarif": 16 },
+    { "nom": "Forfait nuit Albi ou Castres", "description": "Forfait nuit de ou vers Albi ou Castres", "tarif": 20 }
   ],
   "debutNuit": 19,
   "finNuit": 7,
@@ -32,5 +32,5 @@
   "neige": "oui",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.22/templates/template-81.html"
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.30/templates/template-81.html"
 }

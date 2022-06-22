@@ -19,9 +19,7 @@
   "Vehicule": "oui",
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
-  "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "Forfait intramuros minimum Nimes, Ales", "tarif": 15}
-  ],
+  "forfaits disponibles": [{ "nom": "Forfait 1", "description": "Forfait intramuros minimum Nimes, Ales", "tarif": 15 }],
   "debutNuit": 19,
   "finNuit": 8,
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie", "IRM / scanner"],
@@ -29,5 +27,5 @@
   "neige": "oui",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.22/templates/default_template.html"
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.30/templates/default_template.html"
 }

@@ -20,9 +20,9 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "Supplément réservation immédiate", "tarif": 4},
-    {"nom": "Forfait 2", "description": "Supplément réservation avancée", "tarif": 7},
-    {"nom": "Forfait 3", "description": "Forfait Paris sans remise", "tarif": 17}
+    { "nom": "Forfait 1", "description": "Supplément réservation immédiate", "tarif": 4 },
+    { "nom": "Forfait 2", "description": "Supplément réservation avancée", "tarif": 7 },
+    { "nom": "Forfait 3", "description": "Forfait Paris sans remise", "tarif": 17 }
   ],
   "debutNuit": 19,
   "finNuit": 8,
@@ -31,5 +31,5 @@
   "neige": "oui",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.22/templates/default_template.html"
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.30/templates/default_template.html"
 }

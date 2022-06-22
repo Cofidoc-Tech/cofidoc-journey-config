@@ -20,9 +20,9 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "de 0 à 6 km", "km": 6},
-    {"nom": "Forfait 2", "description": "de 7 à 9 km ou Saint-Étienne nord/nord ou sud/sud", "km": 9},
-    {"nom": "Forfait 3", "description": "Saint-Étienne nord/sud", "km": 12}
+    { "nom": "Forfait 1", "description": "de 0 à 6 km", "km": 6 },
+    { "nom": "Forfait 2", "description": "de 7 à 9 km ou Saint-Étienne nord/nord ou sud/sud", "km": 9 },
+    { "nom": "Forfait 3", "description": "Saint-Étienne nord/sud", "km": 12 }
   ],
   "debutNuit": 19,
   "finNuit": 7,
@@ -31,5 +31,5 @@
   "neige": "oui",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.22/templates/default_template.html"
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.30/templates/default_template.html"
 }

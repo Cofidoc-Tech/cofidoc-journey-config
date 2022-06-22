@@ -20,8 +20,8 @@
   "Prise en charge": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait jour", "description": "0 à 9 km de jour", "tarif": 15},
-    {"nom": "Forfait nuit", "description": "0 à 9 km de nuit", "tarif": 22.5}
+    { "nom": "Forfait jour", "description": "0 à 9 km de jour", "tarif": 15 },
+    { "nom": "Forfait nuit", "description": "0 à 9 km de nuit", "tarif": 22.5 }
   ],
   "debutNuit": 19,
   "finNuit": 7,
@@ -30,5 +30,5 @@
   "neige": "oui",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.22/templates/default_template.html"
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.30/templates/default_template.html"
 }

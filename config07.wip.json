@@ -20,9 +20,9 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "jusqu'à 7 km, de jour", "tarif": 17.5},
-    {"nom": "Forfait 2", "description": "jusqu'à 7 km, de nuit", "tarif": 25},
-    {"nom": "Forfait 3", "description": "forfait administratif pour hospitalisation", "tarif": 5}
+    { "nom": "Forfait 1", "description": "jusqu'à 7 km, de jour", "tarif": 17.5 },
+    { "nom": "Forfait 2", "description": "jusqu'à 7 km, de nuit", "tarif": 25 },
+    { "nom": "Forfait 3", "description": "forfait administratif pour hospitalisation", "tarif": 5 }
   ],
   "debutNuit": 19,
   "finNuit": 8,
@@ -31,5 +31,5 @@
   "neige": "oui",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.22/templates/default_template.html"
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.30/templates/default_template.html"
 }

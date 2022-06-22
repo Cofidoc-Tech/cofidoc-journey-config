@@ -19,9 +19,7 @@
   "Vehicule": "oui",
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
-  "forfaits disponibles": [
-    {"nom": "Forfait unique", "description": "de 0 à 9 km", "km": 9}
-  ],
+  "forfaits disponibles": [{ "nom": "Forfait unique", "description": "de 0 à 9 km", "km": 9 }],
   "debutNuit": 19,
   "finNuit": 7,
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie", "IRM / scanner"],
@@ -29,5 +27,5 @@
   "neige": "oui",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.22/templates/template-13.html"
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.30/templates/template-13.html"
 }

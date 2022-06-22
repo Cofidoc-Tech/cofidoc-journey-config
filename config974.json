@@ -20,8 +20,8 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait accompagnant", "description": "", "tarif": 12},
-    {"nom": "Forfait TPMR", "description": "", "tarif": 25}
+    { "nom": "Forfait accompagnant", "description": "", "tarif": 12 },
+    { "nom": "Forfait TPMR", "description": "", "tarif": 25 }
   ],
   "debutNuit": 19,
   "finNuit": 6,
@@ -29,5 +29,5 @@
   "neige": "non",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "re",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.22/templates/template-974.html"
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.30/templates/template-974.html"
 }

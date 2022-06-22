@@ -20,8 +20,12 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "forfait Montpellier intra-muros", "tarif": 20},
-    {"nom": "Forfait 2", "description": "Zone (Montpellier /Castelnau le lez /lattes / Mauguio/Grabels/ lunel /Sète /frontignan/ Mèze/Béziers /Boujan/Agde/Cap d’Agde)", "tarif": 16}
+    { "nom": "Forfait 1", "description": "forfait Montpellier intra-muros", "tarif": 20 },
+    {
+      "nom": "Forfait 2",
+      "description": "Zone (Montpellier /Castelnau le lez /lattes / Mauguio/Grabels/ lunel /Sète /frontignan/ Mèze/Béziers /Boujan/Agde/Cap d’Agde)",
+      "tarif": 16
+    }
   ],
   "debutNuit": 19,
   "finNuit": 7,
@@ -30,5 +34,5 @@
   "neige": "oui",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.22/templates/default_template.html"
+  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.30/templates/default_template.html"
 }
