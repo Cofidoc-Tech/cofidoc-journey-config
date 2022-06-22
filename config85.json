@@ -20,13 +20,12 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    {"nom": "Forfait 1", "description": "Sortie d'hospitalisation, entre 7h et 18h", "tarif": 22},
-    {"nom": "Forfait 2", "description": "Sortie d'hospitalisation, entre 18h et 7h", "tarif": 36},
-    {"nom": "Forfait 3", "description": "La Roche-sur-Yon, Challans, Fontenay, Luçon, Montaigu, les Sables d’Olonne, entre 7h et 18h", "tarif": 12},
-    {"nom": "Forfait 4", "description": "La Roche-sur-Yon, Challans, Fontenay, Luçon, Montaigu, les Sables d’Olonne, entre 18h et 7h", "tarif": 18},
-    {"nom": "Forfait 5", "description": "Intramuros (autre commune), entre 7h et 18h", "tarif": 10},
-    {"nom": "Forfait 6", "description": "Intramuros (autre commune), entre 7h et 18h", "tarif": 11}
-
+    { "nom": "Forfait 1", "description": "Sortie d'hospitalisation, entre 7h et 18h", "tarif": 22 },
+    { "nom": "Forfait 2", "description": "Sortie d'hospitalisation, entre 18h et 7h", "tarif": 36 },
+    { "nom": "Forfait 3", "description": "La Roche-sur-Yon, Challans, Fontenay, Luçon, Montaigu, les Sables d’Olonne, entre 7h et 18h", "tarif": 12 },
+    { "nom": "Forfait 4", "description": "La Roche-sur-Yon, Challans, Fontenay, Luçon, Montaigu, les Sables d’Olonne, entre 18h et 7h", "tarif": 18 },
+    { "nom": "Forfait 5", "description": "Intramuros (autre commune), entre 7h et 18h", "tarif": 10 },
+    { "nom": "Forfait 6", "description": "Intramuros (autre commune), entre 7h et 18h", "tarif": 11 }
   ],
   "debutNuit": 19,
   "finNuit": 7,
@@ -35,6 +34,6 @@
   "neige": "oui",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "fr",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.22/templates/template-85.html",
+  "templateUrl": "https://raw.githubusercontent.com/Cofidoc-Tech/cofidoc-journey-config/2.22/templates/template-85.html",
   "landscapeFormat": "oui"
 }

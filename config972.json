@@ -21,14 +21,10 @@
   "Prise en charge": "oui",
   "debutNuit": 19,
   "finNuit": 6,
-  "raison": [
-    "Hospitalisation / chimiothérapie / dialyse",
-    "Consultation / radiothérapie",
-    "IRM / scanner"
-  ],
+  "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie", "IRM / scanner"],
   "tpmr": "oui",
   "neige": "non",
   "jourFerie": "oui",
   "mapsRegionSuggestions": "mq",
-  "templateUrl": "https://raw.githubusercontent.com/cofidoc/cofidoc-journey-config/2.22/templates/default_template.html"
+  "templateUrl": "https://raw.githubusercontent.com/Cofidoc-Tech/cofidoc-journey-config/2.22/templates/default_template.html"
 }
