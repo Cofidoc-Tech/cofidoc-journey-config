@@ -20,11 +20,11 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    { "nom": "Forfait 1", "description": "Chambéry 6km", "tarif": 13.85 },
+    { "nom": "Forfait 1", "description": "Chambéry 6km", "tarif": 14.21 },
     {
       "nom": "Forfait 2",
       "description": "Albertville, Aix les Bains, St Jean de Maurienne 5km autour",
-      "tarif": 11.98
+      "tarif": 12.87
     }
   ],
   "debutNuit": 19,
