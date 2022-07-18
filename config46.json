@@ -20,9 +20,9 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    { "nom": "Forfait 1", "description": "Cahors, Gourdon, Figeac", "tarif": 20 },
-    { "nom": "Forfait 2", "description": "Cahors, Gourdon, Figeac", "tarif": 20 },
-    { "nom": "Forfait 3", "description": "Cahors, Gourdon, Figeac", "tarif": 20 }
+    { "nom": "Forfait 1", "description": "Cahors, Gourdon, Figeac", "tarif": 13 },
+    { "nom": "Forfait 2", "description": "Cahors, Gourdon, Figeac", "tarif": 11 },
+    { "nom": "Forfait 3", "description": "Cahors, Gourdon, Figeac", "tarif": 10 }
   ],
   "debutNuit": 19,
   "finNuit": 7,
