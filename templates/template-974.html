@@ -84,14 +84,10 @@
   </style>
   <body>
     <div class="flex header">ANNEXE 4</div>
-    <div class="flex subtitle">
-      ANNEXE A LA FACTURE valant attestation de service fait
-    </div>
+    <div class="flex subtitle">ANNEXE A LA FACTURE valant attestation de service fait</div>
     <p>
-      En application de l'article 7.2, cette annexe sign&eacute;e par le patient
-      est transmise par l'entreprise de taxi conventionn&eacute;e afin
-      d'attester de la r&eacute;alit&eacute; de la r&eacute;alisation du
-      transport du patient.
+      En application de l'article 7.2, cette annexe sign&eacute;e par le patient est transmise par l'entreprise de taxi conventionn&eacute;e afin
+      d'attester de la r&eacute;alit&eacute; de la r&eacute;alisation du transport du patient.
     </p>
     <p>Num&eacute;ro de facture: {{{}}}</p>
 
@@ -105,8 +101,7 @@
       <tbody>
         <tr>
           <td>
-            N&deg; de s&eacute;curit&eacute; sociale :
-            {{{patient.socialSecurityNumber}}}<br />
+            N&deg; de s&eacute;curit&eacute; sociale : {{{patient.socialSecurityNumber}}}<br />
             Nom&nbsp;: {{{patient.computedInsuranceHolderLastName}}}<br />
             Pr&eacute;nom : {{{patient.computedInsuranceHolderFirstName}}}<br />
             Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}<br />
@@ -117,29 +112,16 @@
             <div>Nom : {{{patient.computedNonInsuranceHolderLastName}}}</div>
             <div>Pr&eacute;noms : {{{patient.computedNonInsuranceHolderFirstName}}}</div>
             <div>Date de naissance : {{{patient.formattedNonInsuredDateOfBirth}}}</div>
-            <br/>
+            <br />
             Adresse&nbsp;: {{{patient.address}}}
-
-
           </td>
           <td class="enterprise">
-            <div
-              style="
-                height: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-              "
-            >
+            <div style="height: 100%; display: flex; flex-direction: row; justify-content: space-between">
               <div class="flex enterprise">
                 <div>{{{enterprise.nameAndAddress}}}</div>
-                <div>V&eacute;hicule: {{{car}}}</div>
               </div>
 
-              <img
-                src="data:image/png;base64,{{{enterprise.signature}}}"
-                style="align-self: flex-end; width: 100px"
-              />
+              <img src="data:image/png;base64,{{{enterprise.signature}}}" style="align-self: flex-end; width: 100px" />
             </div>
           </td>
         </tr>
@@ -150,32 +132,30 @@
       <thead>
         <tr>
           <th style="width: 5%">&nbsp;</th>
-          <th style="width: 20%">
+          <th style="width: 15%">
             <div class="cellHeader">DEPART</div>
             <div>Date</div>
             <div>Heure</div>
             <div>Lieu de prise en charge</div>
           </th>
-          <th style="width: 20%">
+          <th style="width: 15%">
             <div class="cellHeader">ARRIVEE</div>
             <div>Date</div>
             <div>Heure</div>
             <div>Lieu de prise en charge</div>
           </th>
+          <th style="width: 10%" class="cellHeader">Immatriculation</th>
+          <th style="width: 10%" class="cellHeader">Nombre de patients transport&eacute;s</th>
           <th style="width: 10%" class="cellHeader">
-            Nombre de patients transport&eacute;s
+            A cocher en cas de transport r&eacute;alis&eacute; pour un patient &agrave; mobilit&eacute; r&eacute;duite
           </th>
-          <th style="width: 20%" class="cellHeader">
-            A cocher en cas de transport r&eacute;alis&eacute; pour un patient
-            &agrave; mobilit&eacute; r&eacute;duite
-          </th>
-          <th class="cellHeader">Type</th>
-          <th style="width: 15%">
+          <th class="cellHeader" style="width: 10%">Type</th>
+          <th class="cellHeader" style="width: 10%">
             <div class="cellHeader">Suppl&eacute;ments remboursables</div>
             <div>Routes payantes</div>
           </th>
-          <th>Distance (km)</th>
-          <th>Motif*</th>
+          <th class="cellHeader" style="width: 5%">Distance (km)</th>
+          <th class="cellHeader" style="width: 5%">Motif*</th>
         </tr>
       </thead>
       <tbody>
@@ -192,6 +172,10 @@
             <div>{{formattedArrivalTime}}</div>
             <div>{{{formattedArrivalLocation}}}</div>
           </td>
+          <td>
+            <div>{{{user.lastName}}} {{{user.firstName}}}</div>
+            <div>{{{car.numberplate}}}</div>
+          </td>
           <td>{{concurrentJourneys}}</td>
           <td>{{{tpmr}}}</td>
           <td>{{{journeyType}}}</td>
@@ -205,37 +189,25 @@
         {{/journeys}}
       </tbody>
     </table>
-    <div class="row" style="width: 75%">
-      *H: Hospitalisation / chimiothérapie / dialyse, C: Consultation /
-      radiothérapie, *I: IRM / scanner
-    </div>
+    <div class="row" style="width: 75%">*H: Hospitalisation / chimiothérapie / dialyse, C: Consultation / radiothérapie, *I: IRM / scanner</div>
     <div class="signature">
       <div class="signatureHeader">ATTESTATION DE L'ASSURE(E)</div>
       <div class="signatureDisclaimer">
-        L'assur&eacute;(e), ou la personne transport&eacute;e, ou son
-        repr&eacute;sentant l&eacute;gal, atteste de la r&eacute;alit&eacute; et
-        des conditions du (des) transport(s) d&eacute;taill&eacute;(s)
-        ci-dessus.
+        L'assur&eacute;(e), ou la personne transport&eacute;e, ou son repr&eacute;sentant l&eacute;gal, atteste de la r&eacute;alit&eacute; et des
+        conditions du (des) transport(s) d&eacute;taill&eacute;(s) ci-dessus.
 
         <div class="signatureData">
-          <span>Fait &agrave; {{{doneIn}}}</span><span>Le {{{now}}}</span
-          ><span>Signature </span>
+          <span>Fait &agrave; {{{doneIn}}}</span><span>Le {{{now}}}</span><span>Signature </span>
           <span style="position: relative">
             <span style="font-style: italic">{{impossibleToSign}}</span>
             {{#signaturePatient}}
-            <img
-              src="data:image/png;base64,{{{signaturePatient}}}"
-              style="width: 80px; height: auto; position: absolute; top: -20px"
-            />
+            <img src="data:image/png;base64,{{{signaturePatient}}}" style="width: 80px; height: auto; position: absolute; top: -20px" />
             {{/signaturePatient}}
           </span>
         </div>
       </div>
     </div>
 
-    <div class="footer">
-      <span>CGSS de la R&eacute;union</span
-      ><span>Convention des taxis-F&eacute;vrier 2019</span>
-    </div>
+    <div class="footer"><span>CGSS de la R&eacute;union</span><span>Convention des taxis-F&eacute;vrier 2019</span></div>
   </body>
 </html>
