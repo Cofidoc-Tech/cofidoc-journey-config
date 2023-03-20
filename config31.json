@@ -20,8 +20,8 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    { "nom": "Forfait 1", "description": "intra-muros / Toulouse, Blagnac, Colomiers, Tournefeuille, Muret", "tarif": 20 },
-    { "nom": "Forfait 2", "description": "intra-muros / autre commune", "tarif": 12.5 }
+    { "nom": "Forfait 1", "description": "intra-muros / Toulouse, Blagnac, Colomiers, Tournefeuille, Muret", "tarif": 20.8 },
+    { "nom": "Forfait 2", "description": "intra-muros / autre commune", "tarif": 13 }
   ],
   "debutNuit": 19,
   "finNuit": 8,

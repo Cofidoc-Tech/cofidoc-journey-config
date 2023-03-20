@@ -23,12 +23,12 @@
     {
       "nom": "Forfait jour",
       "description": "de 0 à 5 km, de jour",
-      "tarif": 13
+      "tarif": 14.13
     },
     {
       "nom": "Forfait nuit",
       "description": "de 0 à 5 km, de nuit",
-      "tarif": 18
+      "tarif": 19.56
     }
   ],
   "debutNuit": 19,

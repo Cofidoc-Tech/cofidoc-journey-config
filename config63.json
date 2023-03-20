@@ -23,12 +23,12 @@
     {
       "nom": "Forfait agglomération C",
       "description": "",
-      "tarif": 19.7
+      "tarif": 20.48
     },
     {
       "nom": "Forfait agglomération D",
       "description": "Forfait agglomération pour les trajets de nuit / jour férié",
-      "tarif": 29.5
+      "tarif": 30.67
     }
   ],
   "debutNuit": 19,

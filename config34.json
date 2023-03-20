@@ -20,11 +20,11 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    { "nom": "Forfait 1", "description": "forfait Montpellier intra-muros", "tarif": 20 },
+    { "nom": "Forfait 1", "description": "forfait Montpellier intra-muros", "tarif": 21.73 },
     {
       "nom": "Forfait 2",
       "description": "Zone (Montpellier /Castelnau le lez /lattes / Mauguio/Grabels/ lunel /Sète /frontignan/ Mèze/Béziers /Boujan/Agde/Cap d’Agde)",
-      "tarif": 16
+      "tarif": 17.38
     }
   ],
   "debutNuit": 19,
