@@ -6,7 +6,7 @@
   "Approche en km": "non",
   "Simultane": "oui",
   "Simultane + personne": "non",
-  "Ticket": "oui",
+  "Ticket": "non",
   "ViaMichelin": "oui",
   "Distancier": "oui",
   "Depart (heure)": "oui",
@@ -18,11 +18,7 @@
   "Type (CD)": "oui",
   "Vehicule": "oui",
   "Prise en charge (lecture seule)": "oui",
-  "Forfait": "oui",
-  "forfaits disponibles": [
-    { "nom": "Forfait 1", "description": "forfait jour de 0 à 9 km", "tarif": 22 },
-    { "nom": "Forfait 2", "description": "forfait nuit à 25€", "tarif": 25 }
-  ],
+  "Forfait": "non",
   "debutNuit": 19,
   "finNuit": 7,
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie", "IRM / scanner"],
