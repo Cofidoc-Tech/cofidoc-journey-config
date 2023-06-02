@@ -4,31 +4,27 @@
       padding: 10px;
       font-family: Arial;
       --table-font-size: {{fontSize}};
-     font-size: {{fontSize}};
+      font-size: {{fontSize}};
     }
+
     body > :not(:last-child) {
       margin-bottom: 10px;
     }
+
     table {
       font-size: var(--table-font-size);
-      table-layout: fixed;
     }
+
     th,
     td {
       border: 1px solid black;
       margin: 0 2px;
-      word-wrap: break-word;
-    }
-
-    th {
-      background-color: grey;
-      font-weight: normal;
-      font-size: 8px;
     }
 
     .alignedTop {
       vertical-align: top;
     }
+
     td:not(.alignedTop) {
       text-align: center;
     }
@@ -38,8 +34,8 @@
       <span style="text-decoration: underline"><strong>ANNEXE 4 - ANNEXE A LA FACTURE VALANT ATTESTATION DE SERVICE FAIT </strong> </span>
     </h4>
     <p>
-      En application de l'article 7.2 de la pr&eacute;sente convention, cette annexe sign&eacute;e par le patient est transmise par l'entreprise de
-      taxi conventionn&eacute;e afin d'attester de la r&eacute;alit&eacute; de la r&eacute;alisation du transport du patient.<br />
+      Cette annexe sign&eacute;e par le patient est transmise par l'entreprise de taxi conventionn&eacute;e afin d'attester de la
+      r&eacute;alit&eacute; de la r&eacute;alisation du transport du patient.<br />
       <strong>Num&eacute;ro de facture :&nbsp;</strong>
     </p>
     <div style="display: flex; flex-direction: row">
@@ -51,9 +47,9 @@
         Caisse&nbsp;: {{{patient.socialSecurityName}}}<br />
         Mutuelle&nbsp;: {{{patient.healthInsuranceName}}}<br />
         Date Naissance&nbsp;: {{{patient.formattedDateOfBirth}}}<br />
-        <span style="font-size: 0.75rem">Si la personne transport&eacute;e n'est pas l'assur&eacute;(e): </span>
-        <br />
-        Nom : {{{patient.computedNonInsuranceHolderLastName}}} {{{patient.computedNonInsuranceHolderFirstName}}}<br />
+        <div>Si la personne transport&eacute;e n'est pas l'assur&eacute;(e):</div>
+        <div>Nom : {{{patient.computedNonInsuranceHolderLastName}}} {{{patient.computedNonInsuranceHolderFirstName}}}</div>
+        <div>Date de naissance : {{{patient.formattedNonInsuredDateOfBirth}}}</div>
         Adresse&nbsp;: {{{patient.address}}}
       </div>
       <div style="width: 10px"></div>
@@ -74,65 +70,66 @@
     <table style="border-collapse: collapse; width: 100%; height: 18px; margin-bottom: 0" border="1">
       <thead>
         <tr>
-          <th style="width: 18%">D&eacute;part</th>
-          <th style="width: 18%">Arriv&eacute;e</th>
-          <th rowspan="2" style="width: 7%">Nombre de patients transport&eacute;s</th>
-          <th rowspan="2" style="width: 8%">
+          <th style="width: 20%">D&eacute;part <br />(date, heure et lieu)</th>
+          <th style="width: 20%">Arriv&eacute;e <br />(date, heure et lieu)</th>
+          <th style="width: 10%">Immatriculation</th>
+          <th style="width: 7%">Km</th>
+          <th rowspan="2" style="width: 6%">
             Co&ucirc;t <br />
             compteur
           </th>
-          <th rowspan="2" style="width: 8%">Km</th>
-          <th colspan="2" style="width: 15%">Identification taxi</th>
-          <th rowspan="2" style="width: 5%">TPMR</th>
-          <th rowspan="2" style="width: 5%">Tarif</th>
-          <th rowspan="2" style="width: 10%">Suppl&eacute;ment remboursable (routes payantes)</th>
-          <th rowspan="2" style="width: 6%">Motif*</th>
-        </tr>
-        <tr>
-          <th>Date et heure<br />Lieu de prise en charge</th>
-          <th>Date et heure<br />Lieu de prise en charge</th>
-
-          <th>Nom et pr&eacute;nom du chauffeur</th>
-          <th>Num&eacute;ro d'immatriculation</th>
+          <th style="width: 6%">Attente</th>
+          <th style="width: 7%">Forfait / Tarif</th>
+          <th style="width: 6%">TPMR</th>
+          <th style="width: 6%">Nb<br />patients</th>
+          <th style="width: 6%">P&eacute;age</th>
+          <th style="width: 6%">Motif*</th>
         </tr>
       </thead>
       <tbody>
         {{#journeys}}
         <tr>
           <td class="alignedTop">
-            <div>{{{formattedDepartureDate}}}</div>
-            <div>{{{formattedDepartureTime}}}</div>
+            <div>{{{formattedDepartureDate}}} - {{formattedDepartureTime}}</div>
             <div>{{{formattedDepartureLocation}}}</div>
           </td>
           <td class="alignedTop">
-            <div>{{{formattedDepartureDate}}}</div>
-            <div>{{{formattedArrivalTime}}}</div>
+            <div>{{{formattedDepartureDate}}} - {{formattedArrivalTime}}</div>
             <div>{{{formattedArrivalLocation}}}</div>
           </td>
-          <td>{{{concurrentJourneys}}}</td>
-          <td>{{{counterPrice}}}</td>
+          <td>
+            <div>{{{user.lastName}}} {{{user.firstName}}}</div>
+            <div>{{{car.numberplate}}}</div>
+          </td>
           <td>
             <div>{{#dayTimeKm}} jour: {{{dayTimeKm}}} {{/dayTimeKm}}</div>
             <div>{{#nightTimeKm}} nuit: {{{nightTimeKm}}} {{/nightTimeKm}}</div>
           </td>
-          <td>{{{user.lastName}}} {{{user.firstName}}}</td>
-          <td>{{{car.numberplate}}}</td>
-          <td>{{{tpmr}}}</td>
+          <td>{{{counterPrice}}}</td>
+          <td>{{waitingTime}}</td>
           <td>
             <div>{{forfaitTarif}}</div>
-            <div>{{#snow}}N<sup>*</sup>{{/snow}}</div>
+            <div>{{#snow}}N<sup>**</sup>{{/snow}}</div>
           </td>
-          <td>{{{toll}}}</td>
-          <td>{{{shortReason}}}</td>
+          <td>{{{tpmr}}}</td>
+          <td>{{concurrentJourneys}}</td>
+          <td>{{toll}}</td>
+          <td>{{shortReason}}</td>
         </tr>
         {{/journeys}}
       </tbody>
     </table>
-    <em style="font-size: 0.75rem"> {{#needSnowIceLegend}}N: Neige / Verglas{{/needSnowIceLegend}} </em>
-    <div class="row" style="width: 75%">
-      *H: Hospitalisation / chimioth&eacute;rapie / dialyse, C: Consultation / radioth&eacute;rapie, *I: IRM / scanner
-    </div>
-
+    <em style="font-size: 0.75rem">
+      <div>*H: Hospitalisation / chimioth&eacute;rapie / dialyse, C: Consultation / radioth&eacute;rapie, I: IRM / scanner</div>
+      {{#needSnowIceLegend}}
+      <div>**N: Neige / Verglas</div>
+      {{/needSnowIceLegend}}
+    </em>
+    <p>
+      <strong>SUBROGATION</strong> : L'assur&eacute;(e) autorise le versement direct au transporteur du montant remboursable du(des) transport(s)
+      ci-dessus. Il s&rsquo;engage, s&rsquo;il y a lieu, &agrave; payer au transporteur tout ou partie de la facture en cas de refus total ou partiel
+      de prise en charge par l&rsquo;organisme d&rsquo;assurance maladie.
+    </p>
     <p>
       <br /><strong>ATTESTATION</strong> : L'assur&eacute;(e), ou la personne transport&eacute;e, ou son repr&eacute;sentant l&eacute;gal, atteste de
       la r&eacute;alit&eacute; et des conditions du (des) transports d&eacute;taill&eacute;(s) ci-dessus.

@@ -38,75 +38,39 @@
     <div class="row">
       <div style="display: flex; flex-direction: column">
         <div style="font-weight: bold">Annexe 4</div>
-        <span style="background-color: black; color: white; padding: 5px"
-          >ANNEXE &agrave; la facture</span
-        >
+        <span style="background-color: black; color: white; padding: 5px">ANNEXE &agrave; la facture</span>
       </div>
-      <div
-        class="row"
-        style="padding: 5px; border: 1px solid black; font-weight: bold"
-      >
-        TRANSPORT EN TAXI POUR MOTIF M&Eacute;DICAL
-      </div>
+      <div class="row" style="padding: 5px; border: 1px solid black; font-weight: bold">TRANSPORT EN TAXI POUR MOTIF M&Eacute;DICAL</div>
       <div>ASSURANCE MALADIE</div>
     </div>
     <div>
       <div style="display: flex; flex-direction: row">
-        <div
-          style="
-            flex: 1;
-            padding-left: 5px;
-            text-transform: uppercase;
-            font-style: italic;
-          "
-        >
-          Renseignements concernant l'assur&eacute;(e)(1)
-        </div>
-        <div style="flex: 1; padding-left: 5px; font-style: italic">
-          D&Eacute;NOMINATION DE L'ENTREPRISE
-        </div>
+        <div style="flex: 1; padding-left: 5px; text-transform: uppercase; font-style: italic">Renseignements concernant l'assur&eacute;(e)(1)</div>
+        <div style="flex: 1; padding-left: 5px; font-style: italic">D&Eacute;NOMINATION DE L'ENTREPRISE</div>
       </div>
       <div style="display: flex; flex-direction: row">
         <div class="border" style="flex: 1">
-          <div>
-            N&deg; d'immatriculation : {{{patient.socialSecurityNumber}}}
-          </div>
+          <div>N&deg; d'immatriculation : {{{patient.socialSecurityNumber}}}</div>
           <div>Nom&nbsp;: {{{patient.computedInsuranceHolderLastName}}}</div>
           <div>Nom d'usage&nbsp;:</div>
-          <div>
-            Pr&eacute;noms : {{{patient.computedInsuranceHolderFirstName}}}
-          </div>
+          <div>Pr&eacute;noms : {{{patient.computedInsuranceHolderFirstName}}}</div>
           <div>Nom et pr&eacute;nom ayant-droit :</div>
-          <div>
-            {{{patient.computedNonInsuranceHolderLastName}}}
-            {{{patient.computedNonInsuranceHolderFirstName}}}
-          </div>
+          <div>{{{patient.computedNonInsuranceHolderLastName}}} {{{patient.computedNonInsuranceHolderFirstName}}}</div>
           <div>Caisse&nbsp;: {{{patient.socialSecurityName}}}</div>
           <div>Mutuelle&nbsp;: {{{patient.healthInsuranceName}}}</div>
           <div>Adresse&nbsp;: {{{patient.address}}}</div>
         </div>
 
-        <div
-          class="border"
-          style="flex: 1; display: flex; flex-direction: column"
-        >
+        <div class="border" style="flex: 1; display: flex; flex-direction: column">
           <div>{{{enterprise.nameAndAddress}}}</div>
         </div>
       </div>
     </div>
 
-    <table
-      style="
-        border-collapse: collapse;
-        width: 100%;
-        height: 18px;
-        margin-bottom: 0;
-      "
-      border="1"
-    >
+    <table style="border-collapse: collapse; width: 100%; height: 18px; margin-bottom: 0" border="1">
       <thead>
         <tr>
-          <th style="width: 22%">
+          <th style="width: 20%">
             <div>
               <span class="underlined">D&eacute;part:</span>
               <span>date - heure</span>
@@ -114,7 +78,7 @@
 
             <div>Lieu de prise en charge</div>
           </th>
-          <th style="width: 22%">
+          <th style="width: 20%">
             <div>
               <span class="underlined">Arriv&eacute;e:</span>
               <span>date - heure</span>
@@ -122,21 +86,22 @@
 
             <div>Lieu de prise en charge</div>
           </th>
-          <th style="width: 8%">Nbre de patients transport&eacute;s</th>
-          <th style="width: 22%">
+          <th style="width: 6%">Nbre de patients transport&eacute;s</th>
+          <th style="width: 6%">Co&ucirc;t <br />compteur</th>
+          <th style="width: 20%">
             <div>Nom du conducteur</div>
             <div>Immatriculation</div>
             <div>N&deg; autorisation stationnement</div>
           </th>
-          <th style="width: 8%">Distance totale (km)</th>
-          <th>Temps d'attente</th>
-          <th>Tarif</th>
-          <th style="width: 8%">
+          <th style="width: 6%">Distance totale (km)</th>
+          <th style="width: 4%">Temps d'attente</th>
+          <th style="width: 4%">Tarif</th>
+          <th style="width: 4%">
             Suppl&eacute;ments
             <div>(euros) (2)</div>
           </th>
-          <th>Montant de la course</th>
-          <th>Motif*</th>
+          <th style="width: 6%">Montant de la course</th>
+          <th style="width: 4%">Motif*</th>
         </tr>
       </thead>
       <tbody>
@@ -151,6 +116,7 @@
             <div>{{{formattedArrivalLocation}}}</div>
           </td>
           <td>{{concurrentJourneys}}</td>
+          <td>{{{counterPrice}}}</td>
           <td>
             <div>{{{user.lastName}}} {{{user.firstName}}}</div>
             <div>{{{car.numberplate}}}</div>
@@ -172,12 +138,9 @@
         {{/journeys}}
       </tbody>
     </table>
-    <em style="font-size: 0.75rem">
-      {{#needSnowIceLegend}}*N: Neige / Verglas{{/needSnowIceLegend}}
-    </em>
+    <em style="font-size: 0.75rem"> {{#needSnowIceLegend}}*N: Neige / Verglas{{/needSnowIceLegend}} </em>
     <div class="row" style="width: 75%">
-      *H: Hospitalisation / chimioth&eacute;rapie / dialyse, C: Consultation /
-      radioth&eacute;rapie, *I: IRM / scanner
+      *H: Hospitalisation / chimioth&eacute;rapie / dialyse, C: Consultation / radioth&eacute;rapie, *I: IRM / scanner
     </div>
 
     <div style="display: flex; flex-direction: row">
@@ -187,16 +150,7 @@
         <span>Signature de l'assur&eacute; (3)</span>
 
         <div style="position: relative">
-          <img
-            src="data:image/png;base64,{{{signaturePatient}}}"
-            style="
-              width: 80px;
-              height: auto;
-              position: absolute;
-              left: -100px;
-              top: 0px;
-            "
-          />
+          <img src="data:image/png;base64,{{{signaturePatient}}}" style="width: 80px; height: auto; position: absolute; left: -100px; top: 0px" />
         </div>
       </div>
       {{/signaturePatient}} {{#impossibleToSign}}
@@ -213,9 +167,8 @@
         <legend>Attestation de l'assur&eacute;(e)</legend>
         <div style="font-weight: bold">SUBROGATION</div>
         <div>
-          L'assur&eacute;(e), ou la personne transport&eacute;e ou son
-          repr&eacute;sentant atteste de la r&eacute;alit&eacute; et des
-          conditions du (des) transports d&eacute;taill&eacute;(s) ci-dessus.
+          L'assur&eacute;(e), ou la personne transport&eacute;e ou son repr&eacute;sentant atteste de la r&eacute;alit&eacute; et des conditions du
+          (des) transports d&eacute;taill&eacute;(s) ci-dessus.
         </div>
       </fieldset>
 
@@ -227,13 +180,10 @@
 
     <div class="row">
       <div style="flex: 1; font-style: italic; font-size: 0.75rem">
-        <div>
-          (1) se reporter &agrave; la carte Vitale ou l'attestation de droits
-        </div>
+        <div>(1) se reporter &agrave; la carte Vitale ou l'attestation de droits</div>
         <div>(2) P: P&eacute;age - N: Neige</div>
         <div>
-          (3) Attestation : l'assur&eacute; ou la personne transport&eacute;e,
-          ou son repr&eacute;sentant, atteste de la r&eacute;alit&eacute; et des
+          (3) Attestation : l'assur&eacute; ou la personne transport&eacute;e, ou son repr&eacute;sentant, atteste de la r&eacute;alit&eacute; et des
           conditions du transport
         </div>
       </div>
@@ -241,10 +191,7 @@
       <div>
         Signature de l'entreprise
         <div>
-          <img
-            src="data:image/png;base64,{{{enterprise.signature}}}"
-            style="width: 100px; height: auto; align-self: flex-end"
-          />
+          <img src="data:image/png;base64,{{{enterprise.signature}}}" style="width: 100px; height: auto; align-self: flex-end" />
         </div>
       </div>
     </div>
