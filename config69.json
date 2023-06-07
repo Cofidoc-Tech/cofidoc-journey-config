@@ -14,7 +14,7 @@
   "Depart (Lieu)": "oui",
   "Arrivee (Lieu)": "oui",
   "Peage": "oui",
-  "Type (AB)": "non",
+  "Type (AB)": "oui",
   "Type (CD)": "oui",
   "Vehicule": "oui",
   "Prise en charge (lecture seule)": "oui",
