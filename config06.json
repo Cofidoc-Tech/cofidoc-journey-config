@@ -19,7 +19,38 @@
   "Vehicule": "oui",
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
-  "forfaits disponibles": [{ "nom": "Forfait 1", "description": "Enfant CAMSP, CMPP, CMP", "tarif": 0 }],
+  "forfaits disponibles": [
+    {
+      "nom": "Hospit",
+      "description": "12 km jour",
+      "tarif": 27.16
+    },
+    {
+      "nom": "Hospit",
+      "description": "12 km nuit",
+      "tarif": 35.92
+    },
+    {
+      "nom": "Soins",
+      "description": "12 km jour",
+      "tarif": 49.39
+    },
+    {
+      "nom": "Soins",
+      "description": "12 km nuit",
+      "tarif": 58.99
+    },
+    {
+      "nom": "Enfants",
+      "description": "CAMSP / CMPP jour",
+      "tarif": 34.6
+    },
+    {
+      "nom": "Soins",
+      "description": "CAMSP / CMPP nuit",
+      "tarif": 43.24
+    }
+  ],
   "debutNuit": 18,
   "finNuit": 8,
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie", "IRM / scanner"],
