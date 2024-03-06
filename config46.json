@@ -18,7 +18,7 @@
   "Type (CD)": "oui",
   "Vehicule": "oui",
   "Prise en charge (lecture seule)": "oui",
-  "Forfait": "non",
+  "Forfait": "oui",
   "debutNuit": 19,
   "finNuit": 7,
   "forfaits disponibles": [
