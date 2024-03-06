@@ -21,6 +21,13 @@
   "Forfait": "non",
   "debutNuit": 19,
   "finNuit": 7,
+  "forfaits disponibles": [
+    { "nom": "Cahors ", "description": "intra-muros", "tarif": 15 },
+    { "nom": "Figeac ", "description": "intra-muros", "tarif": 13 },
+    { "nom": "Autre commune ", "description": "intra-muros", "tarif": 12 },
+    { "nom": "Hospit DEPT ", "description": "Forfait entrée", "tarif": 4 },
+    { "nom": "Hospit hors DEPT ", "description": "Forfait entrée", "tarif": 8 }
+  ],
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie", "IRM / scanner"],
   "tpmr": "oui",
   "neige": "oui",
