@@ -20,11 +20,11 @@
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "oui",
   "forfaits disponibles": [
-    { "nom": "Forfait accompagnant", "description": "", "tarif": 12 },
-    { "nom": "Forfait TPMR", "description": "", "tarif": 25 }
+    { "nom": "Forfait Accompagnant", "description": "", "tarif": 12 },
+    { "nom": "Forfait TPMR", "description": "", "tarif": 30 }
   ],
   "debutNuit": 19,
-  "finNuit": 6,
+  "finNuit": 7,
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie", "IRM / scanner"],
   "neige": "non",
   "jourFerie": "oui",
