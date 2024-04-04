@@ -22,8 +22,8 @@
   "forfaits disponibles": [
     {
       "nom": "Forfait ",
-      "description": "Intra muros",
-      "tarif": 14
+      "description": "Intramuros St QUENTIN, LAON et SOISSONS",
+      "tarif": 20
     }
   ],
   "debutNuit": 19,
