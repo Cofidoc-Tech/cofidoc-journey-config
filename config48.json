@@ -19,6 +19,7 @@
   "Vehicule": "oui",
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "non",
+  "forfaits disponibles": [{ "nom": "Aucun", "description": "", "km": 0 }],
   "debutNuit": 19,
   "finNuit": 7,
   "raison": ["Hospitalisation / chimiothérapie / dialyse", "Consultation / radiothérapie", "IRM / scanner"],

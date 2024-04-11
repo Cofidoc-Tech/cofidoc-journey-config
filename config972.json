@@ -18,6 +18,7 @@
   "Vehicule": "oui",
   "Prise en charge (lecture seule)": "oui",
   "Forfait": "non",
+  "forfaits disponibles": [{ "nom": "Aucun", "description": "", "km": 0 }],
   "Prise en charge": "oui",
   "debutNuit": 19,
   "finNuit": 6,
