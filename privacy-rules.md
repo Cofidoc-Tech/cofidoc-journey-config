@@ -1,4 +1,18 @@
-# Règles de confidentialité
-L’utilisation de cette application mobile suppose la collecte, d’un certain nombre d’informations personnelles concernant le Client et ses patients. Les données récoltées sont nécessaires à l’exécution des fonctionnalités proposées par cette application. Cette dernière conserve ces données à cette seule fin et s’engage à ne pas les utiliser dans un autre cadre, ni à les transmettre à des tiers, hors accord express du Client ou cas prévus par la loi.
+# Politique de confidentialité
 
-Conformément à la loi Informatique et Libertés, le Client dispose d’un droit d’opposition, d’interrogation, d’accès et de rectification des données qu’il a fournies. Pour cela, il lui suffit d’en faire la demande à groupe Cofidoc en la formulant à l’adresse électronique suivante : contact@cofidoc.fr, ou encore par courrier postal à Groupe Cofidoc – 33 rue Roquelaine - 31000 Toulouse
+Cette application collecte et traite certaines données personnelles nécessaires à son fonctionnement, notamment les informations du compte utilisateur et les données liées aux patients.
+
+Ces données sont utilisées uniquement dans le cadre des fonctionnalités de l’application et ne sont jamais transmises à des tiers sans consentement préalable, sauf obligation légale.
+
+Les utilisateurs peuvent supprimer leur compte directement depuis l’application, ou en contactant [rgpd@cofidoc.fr](mailto:rgpd@cofidoc.fr).
+
+Après suppression du compte, les données sont conservées pendant une durée maximale de 3 ans à des fins de sécurité et de gestion des éventuels litiges.
+
+Les utilisateurs peuvent demander la suppression définitive de leurs données personnelles à [rgpd@cofidoc.fr](mailto:rgpd@cofidoc.fr). Les données seront alors supprimées sous 30 jours.
+
+Conformément au RGPD, les utilisateurs disposent d’un droit d’accès, de rectification et de suppression de leurs données personnelles.
+
+Groupe Cofidoc
+1 place Jeanne d'Arc
+31000 Toulouse
+France
